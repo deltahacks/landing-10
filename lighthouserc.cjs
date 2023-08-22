@@ -9,4 +9,7 @@ module.exports = {
       preset: "lighthouse:recommended",
     },
   },
+  throttling: {
+    cpuSlowdownMultiplier: 2.2,
+  },
 };
