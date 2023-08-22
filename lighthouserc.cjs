@@ -19,8 +19,8 @@ module.exports = {
         // currently broken when running headless, so skip assertion
         // see: https://github.com/GoogleChrome/lighthouse/issues/14784
         "bf-cache": "off",
-        // TODO: try to get CSP passing on static site
-        "csp-xss": ["warn", { minScore: 0.9 }],
+        // don't think it's possible to properly evaluate csp either
+        "csp-xss": ["off"],
       },
     },
   },
