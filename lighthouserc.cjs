@@ -5,7 +5,6 @@ module.exports = {
         throttling: {
           cpuSlowdownMultiplier: 2.2,
         },
-        skipAudits: ["bf-cache"],
       },
     },
     upload: {
@@ -15,6 +14,11 @@ module.exports = {
     },
     assert: {
       preset: "lighthouse:no-pwa",
+      assertions: {
+        // currently broken when running headless, so skip assertion
+        // see: https://github.com/GoogleChrome/lighthouse/issues/14784
+        "bf-cache": "off",
+      },
     },
   },
 };
