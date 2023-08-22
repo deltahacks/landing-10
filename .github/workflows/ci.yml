@@ -15,7 +15,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
       - name: Prettier Lint
-        run: pnpx prettier . --check
+        run: pnpx prettier . --check --plugin=prettier-plugin-tailwindcss --plugin=prettier-plugin-astro
 
   lighthouseci:
     runs-on: ubuntu-latest
