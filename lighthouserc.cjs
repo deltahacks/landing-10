@@ -3,7 +3,7 @@ module.exports = {
     upload: {
       target: "lhci",
       serverBaseUrl: "https://deltahacks-lhci.up.railway.app",
-      token: "7a547b5b-4683-42d0-9877-a3a8d5c52c04",
+      token: "4c8a9fe6-33a7-46b1-8e2f-3bff0f514351",
     },
     assert: {
       preset: "lighthouse:recommended",
