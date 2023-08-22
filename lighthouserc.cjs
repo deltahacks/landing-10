@@ -1,5 +1,12 @@
 module.exports = {
   ci: {
+    collect: {
+      settings: {
+        throttling: {
+          cpuSlowdownMultiplier: 2.2,
+        },
+      },
+    },
     upload: {
       target: "lhci",
       serverBaseUrl: "https://deltahacks-lhci.up.railway.app",
@@ -8,8 +15,5 @@ module.exports = {
     assert: {
       preset: "lighthouse:recommended",
     },
-  },
-  throttling: {
-    cpuSlowdownMultiplier: 2.2,
   },
 };
