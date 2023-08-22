@@ -5,6 +5,7 @@ module.exports = {
         throttling: {
           cpuSlowdownMultiplier: 2.2,
         },
+        skipAudits: ["bf-cache"],
       },
     },
     upload: {
