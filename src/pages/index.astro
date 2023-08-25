@@ -1,6 +1,7 @@
 ---
 // Component Imports
 // import Button from '../components/Button.astro';
+import Hero from "../components/Hero.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -12,14 +13,21 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro + TailwindCSS</title>
+    <title>DeltaHacks 10</title>
     <meta
       name="description"
-      content="A template page for Astro and TailwindCSS"
+      content="A landing page for McMaster's annual hackathon for change"
     />
   </head>
 
   <body>
-    <p>Hello World!</p>
+    <div class="pt-10">
+      <Hero />
+      <p class="pt-10 px-10">
+        This site is still under construction! If you stumble across this,
+        please check back later! orz
+      </p>
+      <div></div>
+    </div>
   </body>
 </html>
