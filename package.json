@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
+    "@fontsource-variable/inter": "^5.0.8",
     "@types/canvas-confetti": "^1.6.0",
     "astro": "^3.0.7",
     "astro-critters": "^2.0.11",
