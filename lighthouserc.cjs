@@ -22,7 +22,7 @@ module.exports = {
         // don't think it's possible to properly evaluate csp either
         "csp-xss": "off",
         // google analytics has unused js, since we don't own it there's nothing we can do
-        "unused-javascript": "warn"
+        "unused-javascript": "warn",
       },
     },
   },
