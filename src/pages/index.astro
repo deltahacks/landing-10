@@ -1,4 +1,5 @@
 ---
+import Layout from "../layouts/main.astro";
 // Component Imports
 // import Button from '../components/Button.astro';
 import Hero from "../components/Hero.astro";
@@ -8,28 +9,11 @@ import WhoAreWe from "../components/WhoAreWe.astro";
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>DeltaHacks 10</title>
-    <meta
-      name="description"
-      content="A landing page for McMaster's annual hackathon for change"
-    />
-  </head>
-
-  <body>
-    <div class="pt-10">
-      <Hero />
-      <WhoAreWe />
-      <p class="pt-10 px-10">
-        This site is still under construction! If you stumble across this,
-        please check back later! orz
-      </p>
-      <div></div>
-    </div>
-  </body>
-</html>
+<Layout>
+  <Hero />
+  <WhoAreWe />
+  <p class="px-10 pt-10">
+    This site is still under construction! If you stumble across this, please
+    check back later! orz
+  </p>
+</Layout>
