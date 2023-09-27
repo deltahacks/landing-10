@@ -1,5 +1,6 @@
 ---
-const { content } = Astro.props;
+const { title } = Astro.props;
+import '@fontsource-variable/inter';
 ---
 
 <html lang="en">
@@ -7,9 +8,14 @@ const { content } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{content.title}</title>
+    <meta name="generator" content={Astro.generator} />
+    <title>DeltaHacks 10</title>
+    <meta
+      name="description"
+      content="A landing page for McMaster's annual hackathon for change"
+    />
   </head>
-  <body>
+  <body class="bg-[#19333A] text-white">
     <slot />
   </body>
 </html>
