@@ -1,44 +1,61 @@
 ---
 import { Image } from "astro:assets";
 import voiceFlowLogo from "../assets/sponsor_logos/voiceflow.png";
+import logoPlaceholder from "../assets/sponsor_logos/placeholder.png";
+
+const logoList = [
+    voiceFlowLogo,//0
+    logoPlaceholder,//1
+    logoPlaceholder,//2
+    logoPlaceholder,//3
+    logoPlaceholder,//4
+    logoPlaceholder,//5
+    logoPlaceholder,//6
+    logoPlaceholder,//7
+    logoPlaceholder,//8
+    logoPlaceholder,//9
+    logoPlaceholder,//10
+    logoPlaceholder,//11
+]
 ---
-<div class="container text-[#2D9AEA] flex flex-col items-center">
-    <h1 class="w-full flex items-center justify-center font-bold text-5xl mb-10">
-        <span class=" text-white">MEET OUR&nbsp;</span>
+
+<style>
+    .text-stroke {
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    }
+</style>
+
+<div class="container max-w-3xl text-[#2D9AEA] flex flex-col items-center">
+    <h1 class="font-bold text-7xl mb-10 text-center">
+        <span class="text-[#19333A] text-stroke">MEET OUR</span>
         SPONSORS
     </h1>
 
     <!-- Grid container -->
-    <div class="w-full flex flex-col gap-y-5">
+    <div class="w-full flex flex-col gap-y-5 pl-5 pr-5">
         <div class="grid grid-cols-2 gap-x-5">
             <!-- Row 1 (2 items) -->
-            <div>
-                <Image src={voiceFlowLogo} alt="Voiceflow"/>
+            <div class="p-5 justify-center items-center flex col-span-2 sm:col-span-1">
+                <Image class="invert brightness-0" src={logoList[0]} alt="Voiceflow"/>
             </div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
+            <div class="justify-center items-center flex col-span-2 sm:col-span-1"><Image src={logoList[1]} alt="Voiceflow"/></div>
         </div>
         <div class="grid grid-cols-4 gap-x-5">
             <!-- Row 2 (4 items) -->
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
+            <div class="justify-center items-center flex col-span-2 sm:col-span-1"><Image src={logoList[2]} alt="Voiceflow"/></div>
+            <div class="justify-center items-center flex col-span-2 sm:col-span-1"><Image src={logoList[3]} alt="Voiceflow"/></div>
+            <div class="justify-center items-center flex col-span-2 sm:col-span-1"><Image src={logoList[4]} alt="Voiceflow"/></div>
+            <div class="justify-center items-center flex col-span-2 sm:col-span-1"><Image src={logoList[5]} alt="Voiceflow"/></div>
         </div>
-        <div class="grid grid-cols-5 gap-x-5">
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-x-5">
             <!-- Row 3 (5 items) -->
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
+            <div class="justify-center items-center flex"><Image src={logoList[6]} alt="Voiceflow"/></div>
+            <div class="justify-center items-center flex"><Image src={logoList[7]} alt="Voiceflow"/></div>
+            <div class="justify-center items-center flex"><Image src={logoList[8]} alt="Voiceflow"/></div>
+            <div class="justify-center items-center flex"><Image src={logoList[9]} alt="Voiceflow"/></div>
+            <div class="justify-center items-center flex"><Image src={logoList[10]} alt="Voiceflow"/></div>
+            <div class="justify-center items-center flex"><Image src={logoList[11]} alt="Voiceflow"/></div>
         </div>
-        <div class="grid grid-cols-5 gap-x-5">
-            <!-- Row 4 (5 items) -->
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-            <div><Image src={voiceFlowLogo} alt="Voiceflow"/></div>
-        </div>
+   
     </div>
 </div>
