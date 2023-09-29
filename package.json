@@ -11,6 +11,7 @@
     "format": "prettier --write . --plugin=prettier-plugin-tailwindcss --plugin=prettier-plugin-astro"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.0.0",
     "@astrojs/tailwind": "^5.0.0",
     "@fontsource-variable/inter": "^5.0.8",
     "@fontsource/poppins": "^5.0.8",

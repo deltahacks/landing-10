@@ -20,7 +20,9 @@ module.exports = {
         // see: https://github.com/GoogleChrome/lighthouse/issues/14784
         "bf-cache": "off",
         // don't think it's possible to properly evaluate csp either
-        "csp-xss": ["off"],
+        "csp-xss": "off",
+        // google analytics has unused js, since we don't own it there's nothing we can do
+        "unused-javascript": "warn",
       },
     },
   },
