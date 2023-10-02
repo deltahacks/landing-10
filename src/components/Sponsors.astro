@@ -1,19 +1,14 @@
 ---
-import { Image, getImage } from "astro:assets";
+import { Image } from "astro:assets";
 import voiceFlowLogo from "../assets/sponsor_logos/voiceflow.png";
 import verbwireLogo from "../assets/sponsor_logos/verbwire.svg";
-import type { ImageMetadata } from "astro";
 
-const getImgSrcs = async (imgSrc: ImageMetadata, widths: number[]) => {
-  return await Promise.all(
-    widths.map(async (width) => ({
-      width: width,
-      src: await getImage({ src: imgSrc, width: width }),
-    })),
-  );
-};
+import ResponsiveImage, {
+  getImgSrcs,
+  type ResponsiveImageItem,
+} from "./ResponsiveImage.astro";
 
-const logoList = [
+const logoList: Array<ResponsiveImageItem | undefined> = [
   {
     class: "brightness-0 invert",
     src: voiceFlowLogo,
@@ -42,7 +37,7 @@ const logoList = [
 ---
 
 <div class="container flex max-w-3xl flex-col items-center text-[#2D9AEA]">
-  <h1 class="font-display mb-10 text-center text-6xl font-bold">
+  <h1 class="mb-10 text-center font-display text-6xl font-bold">
     <span class="text-fill-transparent text-stroke-white text-stroke-2"
       >MEET OUR</span
     >
@@ -56,22 +51,7 @@ const logoList = [
       <div
         class="col-span-2 flex items-center justify-center bg-white bg-opacity-20 p-5 sm:col-span-1"
       >
-        {
-          logoList[0] && (
-            <img
-              class={logoList[0].class}
-              src={logoList[0].src.src}
-              alt={logoList[0].alt}
-              width={logoList[0].src.width}
-              height={logoList[0].src.height}
-              srcset={logoList[0].srcs
-                .map((img) => `${img.src.src} ${img.width}w`)
-                .join(", ")}
-              sizes={logoList[0].sizes}
-              loading="lazy"
-            />
-          )
-        }
+        {logoList[0] && <ResponsiveImage image={logoList[0]} />}
       </div>
       <div
         class="col-span-2 flex items-center justify-center bg-white bg-opacity-20 sm:col-span-1"
