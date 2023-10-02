@@ -2,38 +2,62 @@
 import { Image } from "astro:assets";
 import voiceFlowLogo from "../assets/sponsor_logos/voiceflow.png";
 import verbwireLogo from "../assets/sponsor_logos/verbwire.svg";
+import placeholder from "../assets/sponsor_logos/placeholder.png";
 
 import ResponsiveImage, {
   getImgSrcs,
   type ResponsiveImageItem,
 } from "./ResponsiveImage.astro";
 
-const logoList: Array<ResponsiveImageItem | undefined> = [
+const logoList: Array<{
+  image: ResponsiveImageItem;
+  divClass: string;
+}> = [
   {
-    class: "brightness-0 invert",
-    src: voiceFlowLogo,
-    alt: "Voiceflow",
-    srcs: await getImgSrcs(voiceFlowLogo, [628, 1080]),
-    sizes:
-      "(min-width: 820px) 314px, (min-width: 640px) 40vw, calc(100vw - 80px)",
+    image: {
+      class: "brightness-0 invert",
+      src: voiceFlowLogo,
+      alt: "Voiceflow",
+      srcs: await getImgSrcs(voiceFlowLogo, [628, 1080]),
+      sizes:
+        "(min-width: 820px) 314px, (min-width: 640px) 40vw, calc(100vw - 80px)",
+    },
+    divClass: "col-span-6",
   },
   {
-    class: "p-2",
-    src: verbwireLogo,
-    alt: "Verbwire",
-    srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
+    image: {
+      class: "p-2",
+      src: verbwireLogo,
+      alt: "Verbwire",
+      srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
+    },
+    divClass: "col-span-6",
   },
-  undefined,
-  undefined,
-  undefined,
-  undefined,
-  undefined,
-  undefined,
-  undefined,
-  undefined,
-  undefined,
-  undefined,
 ];
+
+// placeholders
+for (let i = 0; i < 4; i++) {
+  logoList.push({
+    image: {
+      class: "",
+      src: placeholder,
+      alt: "Placeholder",
+      srcs: await getImgSrcs(placeholder, [placeholder.width]),
+    },
+    divClass: "col-span-3",
+  });
+}
+for (let i = 0; i < 6; i++) {
+  logoList.push({
+    image: {
+      class: "",
+      src: placeholder,
+      alt: "Placeholder",
+      srcs: await getImgSrcs(placeholder, [placeholder.width]),
+    },
+    divClass: "col-span-2",
+  });
+}
 ---
 
 <div class="container flex max-w-3xl flex-col items-center text-[#2D9AEA]">
@@ -45,151 +69,22 @@ const logoList: Array<ResponsiveImageItem | undefined> = [
   </h1>
 
   <!-- Grid container -->
-  <div class="flex w-full flex-col gap-y-5 pl-5 pr-5">
-    <div class="grid min-h-[5rem] grid-cols-2 gap-5">
-      <!-- Row 1 (2 items) -->
-      <div
-        class="col-span-2 flex items-center justify-center bg-white bg-opacity-20 p-5 sm:col-span-1"
-      >
-        {logoList[0] && <ResponsiveImage image={logoList[0]} />}
-      </div>
-      <div
-        class="col-span-2 flex items-center justify-center bg-white bg-opacity-20 sm:col-span-1"
-      >
-        {
-          logoList[1] && (
-            <Image
-              class={logoList[1].class}
-              src={logoList[1].src}
-              alt={logoList[1].alt}
-            />
-          )
-        }
-      </div>
-    </div>
-    <div class="grid min-h-[5rem] grid-cols-4 gap-5">
-      <!-- Row 2 (4 items) -->
-      <div
-        class="col-span-2 flex items-center justify-center bg-white bg-opacity-20 sm:col-span-1"
-      >
-        {
-          logoList[2] && (
-            <Image
-              class={logoList[2].class}
-              src={logoList[2].src}
-              alt={logoList[2].alt}
-            />
-          )
-        }
-      </div>
-      <div
-        class="col-span-2 flex items-center justify-center bg-white bg-opacity-20 sm:col-span-1"
-      >
-        {
-          logoList[3] && (
-            <Image
-              class={logoList[3].class}
-              src={logoList[3].src}
-              alt={logoList[3].alt}
-            />
-          )
-        }
-      </div>
-      <div
-        class="col-span-2 flex items-center justify-center bg-white bg-opacity-20 sm:col-span-1"
-      >
-        {
-          logoList[4] && (
-            <Image
-              class={logoList[4].class}
-              src={logoList[4].src}
-              alt={logoList[4].alt}
-            />
-          )
-        }
-      </div>
-      <div
-        class="col-span-2 flex items-center justify-center bg-white bg-opacity-20 sm:col-span-1"
-      >
-        {
-          logoList[5] && (
-            <Image
-              class={logoList[5].class}
-              src={logoList[5].src}
-              alt={logoList[5].alt}
-            />
-          )
-        }
-      </div>
-    </div>
-    <div class="grid min-h-[5rem] grid-cols-3 gap-5 sm:grid-cols-6">
-      <!-- Row 3 (5 items) -->
-      <div class="flex items-center justify-center bg-white bg-opacity-20">
-        {
-          logoList[6] && (
-            <Image
-              class={logoList[6].class}
-              src={logoList[6].src}
-              alt={logoList[6].alt}
-            />
-          )
-        }
-      </div>
-      <div class="flex items-center justify-center bg-white bg-opacity-20">
-        {
-          logoList[7] && (
-            <Image
-              class={logoList[7].class}
-              src={logoList[7].src}
-              alt={logoList[7].alt}
-            />
-          )
-        }
-      </div>
-      <div class="flex items-center justify-center bg-white bg-opacity-20">
-        {
-          logoList[8] && (
-            <Image
-              class={logoList[8].class}
-              src={logoList[8].src}
-              alt={logoList[8].alt}
-            />
-          )
-        }
-      </div>
-      <div class="flex items-center justify-center bg-white bg-opacity-20">
-        {
-          logoList[9] && (
-            <Image
-              class={logoList[9].class}
-              src={logoList[9].src}
-              alt={logoList[9].alt}
-            />
-          )
-        }
-      </div>
-      <div class="flex items-center justify-center bg-white bg-opacity-20">
-        {
-          logoList[10] && (
-            <Image
-              class={logoList[10].class}
-              src={logoList[10].src}
-              alt={logoList[10].alt}
-            />
-          )
-        }
-      </div>
-      <div class="flex items-center justify-center bg-white bg-opacity-20">
-        {
-          logoList[11] && (
-            <Image
-              class={logoList[11].class}
-              src={logoList[11].src}
-              alt={logoList[11].alt}
-            />
-          )
-        }
-      </div>
-    </div>
+  <div class="grid grid-cols-12 gap-5">
+    {
+      logoList.map(
+        (logo) =>
+          logo && (
+            // add extra classes as an override
+            // TODO: consider adding `classnames` package in the future if this gets more complicated
+            <div class={logo.divClass + " h-full bg-white bg-opacity-20 p-5"}>
+              <ResponsiveImage
+                image={{
+                  ...logo.image,
+                }}
+              />
+            </div>
+          ),
+      )
+    }
   </div>
 </div>
