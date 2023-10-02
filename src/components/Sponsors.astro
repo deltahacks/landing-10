@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+import voiceFlowLogo from "../assets/sponsor_logos/voiceflow.png";
+import verbwireLogo from "../assets/sponsor_logos/verbwire.svg";
+import placeholder from "../assets/sponsor_logos/placeholder.png";
+
+import ResponsiveImage, {
+  getImgSrcs,
+  type ResponsiveImageItem,
+} from "./ResponsiveImage.astro";
+
+const logoList: Array<{
+  image: ResponsiveImageItem;
+  divClass: string;
+}> = [
+  {
+    image: {
+      class: "brightness-0 invert",
+      src: voiceFlowLogo,
+      alt: "Voiceflow",
+      srcs: await getImgSrcs(voiceFlowLogo, [628, 1080]),
+      sizes:
+        "(min-width: 820px) 314px, (min-width: 640px) 40vw, calc(100vw - 80px)",
+    },
+    divClass: "col-span-6",
+  },
+  {
+    image: {
+      class: "p-2",
+      src: verbwireLogo,
+      alt: "Verbwire",
+      srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
+    },
+    divClass: "col-span-6",
+  },
+];
+
+// placeholders
+for (let i = 0; i < 4; i++) {
+  logoList.push({
+    image: {
+      class: "",
+      src: placeholder,
+      alt: "Placeholder",
+      srcs: await getImgSrcs(placeholder, [placeholder.width]),
+    },
+    divClass: "col-span-3",
+  });
+}
+for (let i = 0; i < 6; i++) {
+  logoList.push({
+    image: {
+      class: "",
+      src: placeholder,
+      alt: "Placeholder",
+      srcs: await getImgSrcs(placeholder, [placeholder.width]),
+    },
+    divClass: "col-span-2",
+  });
+}
+---
+
+<div class="container flex max-w-3xl flex-col items-center text-[#2D9AEA]">
+  <h1 class="mb-10 text-center font-display text-6xl font-bold">
+    <span class="text-fill-transparent text-stroke-white text-stroke-2"
+      >MEET OUR</span
+    >
+     SPONSORS
+  </h1>
+
+  <!-- Grid container -->
+  <div class="grid grid-cols-12 gap-5">
+    {
+      logoList.map(
+        (logo) =>
+          logo && (
+            // add extra classes as an override
+            // TODO: consider adding `classnames` package in the future if this gets more complicated
+            <div class={logo.divClass + " h-full bg-white bg-opacity-20 p-5"}>
+              <ResponsiveImage
+                image={{
+                  ...logo.image,
+                }}
+              />
+            </div>
+          ),
+      )
+    }
+  </div>
+</div>
