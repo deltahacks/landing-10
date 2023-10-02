@@ -9,3 +9,16 @@
 - [Astro](https://astro.build/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci)
+
+## Getting Started
+
+### Prerequisites
+
+- NodeJS
+- pnpm
+
+### Steps
+
+1. Pull the repo
+2. `pnpm install`
+3. `pnpm run dev`
