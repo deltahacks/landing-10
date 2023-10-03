@@ -1,15 +1,35 @@
 ---
-const { content } = Astro.props;
+import "@fontsource-variable/inter";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/700.css";
 ---
 
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-LZ04W4C9XR"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LZ04W4C9XR");
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{content.title}</title>
+    <meta name="generator" content={Astro.generator} />
+    <title>DeltaHacks 10</title>
+    <meta
+      name="description"
+      content="A landing page for McMaster's annual hackathon for change"
+    />
   </head>
-  <body>
+  <body class="bg-[#19333A] text-white">
     <slot />
   </body>
 </html>

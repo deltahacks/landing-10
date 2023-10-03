@@ -1,0 +1,44 @@
+---
+import type { GetImageResult } from "astro";
+import { getImage } from "astro:assets";
+
+export const getImgSrcs = async (imgSrc: ImageMetadata, widths: number[]) => {
+  return await Promise.all(
+    widths.map(async (width) => ({
+      width: width,
+      src: await getImage({ src: imgSrc, width: width }),
+    })),
+  );
+};
+
+export type ResponsiveImageItem = {
+  class: string;
+  src: ImageMetadata;
+  alt: string;
+  srcs: {
+    width: number;
+    src: GetImageResult;
+  }[];
+  sizes?: string;
+};
+
+interface Props {
+  image: ResponsiveImageItem;
+  loading?: "lazy" | "eager";
+}
+
+const { image: responsiveImage, loading } = Astro.props;
+---
+
+<img
+  class={responsiveImage?.class}
+  src={responsiveImage?.src.src}
+  alt={responsiveImage?.alt}
+  width={responsiveImage?.src.width}
+  height={responsiveImage?.src.height}
+  srcset={responsiveImage?.srcs
+    .map((img) => `${img.src.src} ${img.width}w`)
+    .join(", ")}
+  sizes={responsiveImage?.sizes}
+  loading={loading}
+/>

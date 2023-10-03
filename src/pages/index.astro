@@ -1,8 +1,10 @@
 ---
+import Layout from "../layouts/main.astro";
 // Component Imports
 // import Button from '../components/Button.astro';
 import Hero from "../components/Hero.astro";
 import Community from "../components/Community.astro";
+import Sponsors from "../components/Sponsors.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -34,3 +36,12 @@ import Community from "../components/Community.astro";
     </div>
   </body>
 </html>
+<Layout>
+  <p class="px-10 pt-10">
+    This site is still under construction! If you stumble across this, please
+    check back later! orz
+  </p>
+  <div class="flex w-full flex-col items-center">
+    <Sponsors />
+  </div>
+</Layout>
