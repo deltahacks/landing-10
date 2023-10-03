@@ -19,6 +19,7 @@ const logoList: Array<{
       src: voiceFlowLogo,
       alt: "Voiceflow",
       srcs: await getImgSrcs(voiceFlowLogo, [628, 1080]),
+      link: "https://www.voiceflow.com/",
       sizes:
         "(min-width: 820px) 314px, (min-width: 640px) 40vw, calc(100vw - 80px)",
     },
@@ -30,6 +31,7 @@ const logoList: Array<{
       src: verbwireLogo,
       alt: "Verbwire",
       srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
+      link: "https://www.verbwire.com/",
     },
     divClass: "col-span-6",
   },
@@ -76,13 +78,19 @@ for (let i = 0; i < 6; i++) {
           logo && (
             // add extra classes as an override
             // TODO: consider adding `classnames` package in the future if this gets more complicated
-            <div class={logo.divClass + " h-full bg-white bg-opacity-20 p-5"}>
-              <ResponsiveImage
-                image={{
-                  ...logo.image,
-                }}
-              />
-            </div>
+            <a
+              href={logo.image.link ?? "javascript:;"}
+              class={logo.divClass + " h-full"}
+              target={logo.image.link ? "_blank" : undefined}
+            >
+              <div class={logo.divClass + " h-full bg-white bg-opacity-20 p-5"}>
+                <ResponsiveImage
+                  image={{
+                    ...logo.image,
+                  }}
+                />
+              </div>
+            </a>
           ),
       )
     }
