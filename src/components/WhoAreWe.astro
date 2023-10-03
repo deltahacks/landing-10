@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import mapAsset from "../assets/map 2.svg";
+import compassAsset from "../assets/compass.svg";
+---
+
+<div class="font-display mx-auto max-w-6xl p-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-6 z-0">
+    <div class="w-72 scale-100 md:scale-125 translate-y-2 mx-auto my-auto">
+      <Image
+        src={mapAsset}
+        alt="Map"
+        class="-rotate-[79.08deg] scale-y-75 scale-x-[0.6] -translate-x-4"
+      />
+      <Image
+        src={compassAsset}
+        alt="Compass"
+        class="absolute top-0 left-0 scale-y-[1.35] scale-x-[1.5] translate-x-28 translate-y-14"
+      />
+    </div>
+    <h1
+      class="text-5xl font-bold md:text-[150px] md:order-first z-10 lg:col-span-2 md:leading-[0.8]"
+    >
+      <span class="md:block"> WHO</span>
+      <span
+        class="text-fill-transparent text-stroke-white text-stroke-2 whitespace-nowrap md:whitespace-normal"
+      >
+        ARE WE?
+      </span>
+    </h1>
+  </div>
+
+  <div class="columns-1 md:columns-2 space-y-6 text-xl">
+    <p>
+      DeltaHacks is the annual hackathon for change. Each year, we enable over
+      500 students from across North America, working hard over 36 hours, to
+      bring their ideas to life and make a positive change in any field.
+    </p>
+    <p>
+      We work with McMaster University to bring in hackers of all levels, from
+      the novice to the most experienced. Our team works diligently year round
+      to provide a welcoming atmosphere to all of our participants.
+    </p>
+    <p>
+      We supply the food, venue, and workshops, making sure even the most
+      seasoned veterans get the chance to have new experiences. Whether with a
+      team or on your own, you'll get the platform to make your visions a
+      reality.
+    </p>
+    <p>
+      Now in our 10th year running, DeltaHacks X is our biggest and best event
+      yet. Unleash your creativity and make something great—we'll handle the
+      rest!
+    </p>
+  </div>
+</div>
