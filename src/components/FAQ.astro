@@ -1,3 +1,7 @@
+---
+import Question from "./Question";
+---
+
 <div class="container flex max-w-3xl flex-col items-center text-white">
   <h1 class="mb-10 text-center font-display text-6xl font-bold">
     <span class="text-fill-transparent text-stroke-white text-stroke-2"
@@ -5,4 +9,8 @@
     </span>
      QUESTIONS?
   </h1>
+  <div class="grid h-64 w-full gap-5 md:grid-cols-2">
+    <Question client:load />
+    <Question client:load />
+  </div>
 </div>
