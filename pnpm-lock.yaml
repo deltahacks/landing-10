@@ -35,9 +35,6 @@ dependencies:
   postcss:
     specifier: ^8.4.29
     version: 8.4.29
-  sharp:
-    specifier: ^0.32.6
-    version: 0.32.6
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
