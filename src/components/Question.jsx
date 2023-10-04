@@ -16,12 +16,11 @@ export default function Question({ question, answer }) {
               <ChevronUpIcon className="ui-open:rotate-180 ui-open:transform w-6 transition-all" />
             </Disclosure.Button>
             <Transition
-              enter="transition duration-100 ease-out"
-              enterFrom="transform scale-95 opacity-0 "
-              enterTo="transform scale-100 opacity-100"
-              leave="transition duration-75 ease-out"
-              leaveFrom="transform scale-100 opacity-100"
-              leaveTo="transform scale-95 opacity-0"
+              className="overflow-hidden transition-all duration-500"
+              enterFrom="transform scale-95 opacity-0 max-h-0"
+              enterTo="transform scale-100 opacity-100 max-h-96"
+              leaveFrom="transform scale-100 opacity-100 max-h-96"
+              leaveTo="transform scale-95 opacity-0 max-h-0"
             >
               <Disclosure.Panel
                 static
