@@ -3,13 +3,17 @@ import { ChevronUpIcon } from "@heroicons/react/20/solid";
 
 export default function Question({ question, answer }) {
   return (
-    <div className="w-full px-4 pt-16">
-      <Disclosure as="div" className="mt-2">
+    <div className="w-full px-2 pt-6">
+      <Disclosure as="div" className="mt-2 border-b-[1px] pb-2">
         {({ open }) => (
           <>
-            <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+            <Disclosure.Button
+              className="text-md flex w-full justify-between 
+            rounded-lg px-4 py-2 text-left font-medium text-white hover:bg-white hover:bg-opacity-5 focus:outline-none focus-visible:ring focus-visible:ring-white
+             focus-visible:ring-opacity-75"
+            >
               <span>{question}</span>
-              <ChevronUpIcon className="ui-open:rotate-180 ui-open:transform w-4 transition-all" />
+              <ChevronUpIcon className="ui-open:rotate-180 ui-open:transform w-6 transition-all" />
             </Disclosure.Button>
             <Transition
               enter="transition duration-100 ease-out"
@@ -21,7 +25,7 @@ export default function Question({ question, answer }) {
             >
               <Disclosure.Panel
                 static
-                className="px-4 pb-2 pt-4 text-sm text-gray-500"
+                className="px-4 pb-2 pt-4 text-sm text-gray-400"
               >
                 {answer}
               </Disclosure.Panel>

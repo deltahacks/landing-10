@@ -65,7 +65,7 @@ const questions: Array<{
     </span>
      QUESTIONS?
   </h1>
-  <div class="grid h-64 w-full gap-5 md:grid-cols-2">
+  <div class="grid w-full md:grid-cols-2">
     {
       questions.map(({ question, answer }) => (
         <Question question={question} answer={answer} client:load />
