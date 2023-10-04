@@ -1,5 +1,61 @@
 ---
 import Question from "./Question";
+
+const questions: Array<{
+  question: string;
+  answer: string;
+}> = [
+  {
+    question: "Quis autem vel eum iure reprehenderit?",
+    answer:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+  },
+  {
+    question: "Quis autem vel eum iure reprehenderit?",
+    answer:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+  },
+  {
+    question: "Quis autem vel eum iure reprehenderit?",
+    answer:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+  },
+  {
+    question: "Quis autem vel eum iure reprehenderit?",
+    answer:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+  },
+  {
+    question: "Quis autem vel eum iure reprehenderit?",
+    answer:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+  },
+  {
+    question: "Quis autem vel eum iure reprehenderit?",
+    answer:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+  },
+  {
+    question: "Quis autem vel eum iure reprehenderit?",
+    answer:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+  },
+  {
+    question: "Quis autem vel eum iure reprehenderit?",
+    answer:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+  },
+  {
+    question: "Quis autem vel eum iure reprehenderit?",
+    answer:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+  },
+  {
+    question: "Quis autem vel eum iure reprehenderit?",
+    answer:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.",
+  },
+];
 ---
 
 <div class="container flex max-w-3xl flex-col items-center text-white">
@@ -10,7 +66,10 @@ import Question from "./Question";
      QUESTIONS?
   </h1>
   <div class="grid h-64 w-full gap-5 md:grid-cols-2">
-    <Question client:load />
-    <Question client:load />
+    {
+      questions.map(({ question, answer }) => (
+        <Question question={question} answer={answer} client:load />
+      ))
+    }
   </div>
 </div>
