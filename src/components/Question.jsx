@@ -13,7 +13,7 @@ export default function Question({ question, answer }) {
              focus-visible:ring-opacity-75"
             >
               <span>{question}</span>
-              <ChevronUpIcon className="ui-open:rotate-180 ui-open:transform w-6 transition-all" />
+              <ChevronUpIcon className="w-6 transition-all ui-open:rotate-180 ui-open:transform" />
             </Disclosure.Button>
             <Transition
               className="overflow-hidden transition-all duration-500"
