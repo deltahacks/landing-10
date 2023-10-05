@@ -1,6 +1,7 @@
 module.exports = {
   ci: {
     collect: {
+      url: ["http://localhost/?utm_source=lighthouse&utm_medium=devtools"],
       numberOfRuns: 5,
       settings: {
         throttling: {
