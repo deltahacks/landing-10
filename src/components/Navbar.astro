@@ -3,13 +3,13 @@ import { Image } from "astro:assets";
 ---
 
 <div
-  class="align-center flex h-16 w-full justify-between bg-[#19333A] bg-opacity-40 px-6 pt-4 backdrop-blur-xl md:px-8"
+  class="align-center flex h-16 justify-between bg-[#19333A] bg-opacity-40 px-6 py-4 backdrop-blur-xl md:px-8"
 >
   <div class="w-12 pt-1">
     <Image width="24" height="24" class="h-6" src="/nav_logo.svg" alt="logo" />
   </div>
   <div
-    class="hidden w-1/2 justify-between text-lg text-white md:flex xl:text-2xl"
+    class="hidden w-full justify-between px-12 text-lg text-white md:flex lg:w-1/2 lg:px-0 xl:text-2xl"
   >
     <p>About</p>
     <p>Statistics</p>
@@ -47,7 +47,7 @@ import { Image } from "astro:assets";
       /></a
     >
   </div>
-  <div class="flex pt-1 md:hidden">
+  <div class="flex md:hidden">
     <Image width="24" height="24" src="/nav_sizing.svg" alt="NAV" />
   </div>
 </div>
