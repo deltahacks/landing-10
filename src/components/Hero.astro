@@ -1,34 +1,48 @@
-<div
-  class="flex h-screen flex-col justify-between bg-blue-200 bg-[url('/beachBackground.svg')] p-4 pt-24 sm:justify-normal sm:gap-24 sm:bg-cover sm:p-24"
->
-  <div>
-    <h1 class="text-5xl font-extrabold tracking-tight md:text-8xl lg:text-9xl">
-      DELTAHACKS<span class="text-rose-600">X</span>
-    </h1>
-    <!-- RGBA(231, 34, 80, 1) -->
-    <p
-      class="tagline text-xl font-semibold leading-6 tracking-tight text-cyan-900"
-    >
-      The annual hackathon for change, taking place at McMaster University from
-      January 13 to 15, 2024.
-    </p>
-  </div>
+---
+import Navbar from "./Navbar.astro";
+---
 
-  <!-- RGBA(19, 77, 84, 1) -->
+<div>
   <div
-    class="flex w-full flex-col gap-4 text-center text-xl font-semibold sm:w-1/2 sm:flex-row"
+    class="flex h-screen flex-col justify-between bg-blue-200 bg-[url('/background_simplified.svg')] bg-center p-4 pt-24 sm:justify-normal sm:gap-24 sm:bg-cover sm:p-24"
   >
-    <a
-      href="https://portal.deltahacks.com/"
-      class="w-full bg-white py-6 text-center text-black"
+    <div class="backdrop-blur-md"><Navbar /></div>
+    <div class="z-10">
+      <h1
+        class="text-5xl font-extrabold tracking-tight drop-shadow-2xl md:text-8xl lg:text-9xl"
+      >
+        DELTAHACKS<span class="text-rose-600">X</span>
+      </h1>
+      <!-- RGBA(231, 34, 80, 1) -->
+      <p
+        class="tagline text-xl font-semibold leading-6 tracking-tight text-cyan-900 sm:w-4/5"
+      >
+        The annual hackathon for change, taking place at McMaster University
+        from January 13 to 15, 2024.
+      </p>
+    </div>
+
+    <!-- RGBA(19, 77, 84, 1) -->
+    <div
+      class="z-10 flex w-full flex-col gap-4 text-center text-xl font-semibold sm:w-1/2 sm:flex-row"
     >
-      VIEW SCHEDULE</a
-    >
-    <a
-      href="https://portal.deltahacks.com/"
-      class="w-full bg-rose-600 py-6 text-center"
-    >
-      APPLY TO ATTEND</a
-    >
+      <a
+        href="https://portal.deltahacks.com/"
+        class="w-full bg-white py-4 text-center text-black sm:border-4 sm:border-white sm:bg-transparent sm:text-white sm:shadow-[0px_0px_35px_-15px_rgba(0,0,0,0.5)]"
+      >
+        VIEW SCHEDULE</a
+      >
+      <a
+        href="https://portal.deltahacks.com/"
+        class="w-full border-transparent bg-rose-600 py-4 text-center sm:border-4"
+      >
+        APPLY TO ATTEND</a
+      >
+    </div>
+    <img
+      src="/hero_logo.svg"
+      alt=""
+      class="w[100px] absolute z-0 m-32 p-2 sm:bottom-0 sm:right-0 sm:w-96"
+    />
   </div>
 </div>
