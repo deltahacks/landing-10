@@ -5,7 +5,7 @@ import Layout from "../layouts/main.astro";
 import Hero from "../components/Hero.astro";
 import WhoAreWe from "../components/WhoAreWe.astro";
 import Sponsors from "../components/Sponsors.astro";
-import { Carousel } from "../components/react/Carousel.tsx";
+import CarouselWrapper from "../components/CarouselWrapper.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -14,7 +14,7 @@ import { Carousel } from "../components/react/Carousel.tsx";
 <Layout>
   <Hero />
   <WhoAreWe />
-  <Carousel client:load />
+  <CarouselWrapper />
   <div class="flex w-full flex-col items-center">
     <Sponsors />
   </div>
