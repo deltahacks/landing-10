@@ -2,11 +2,13 @@
 import Navbar from "./Navbar.astro";
 ---
 
-<div>
+<div
+  class="h-screen bg-[url('/background_simplified.svg')] bg-center p-8 sm:justify-normal sm:bg-cover"
+>
+  <div class="w-full backdrop-blur-md"><Navbar /></div>
   <div
-    class="flex h-screen flex-col justify-between bg-blue-200 bg-[url('/background_simplified.svg')] bg-center p-4 pt-24 sm:justify-normal sm:gap-24 sm:bg-cover sm:p-24"
+    class="flex h-full flex-col justify-between p-4 pt-24 sm:justify-normal sm:gap-24"
   >
-    <div class="backdrop-blur-md"><Navbar /></div>
     <div class="z-10">
       <h1
         class="text-5xl font-extrabold tracking-tight drop-shadow-2xl md:text-8xl lg:text-9xl"
@@ -40,7 +42,7 @@ import Navbar from "./Navbar.astro";
       >
     </div>
     <img
-      src="/hero_logo.svg"
+      src=""
       alt=""
       class="w[100px] absolute z-0 m-32 p-2 sm:bottom-0 sm:right-0 sm:w-96"
     />
