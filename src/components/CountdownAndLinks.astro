@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import chestAsset from "../assets/treasure-chest.svg";
+
+import dayjs from "dayjs";
+import { Counter } from "./Counter";
+
+const end = dayjs(new Date("2023-10-15 23:59:59")); // temporary deadline for testing
+---
+
+<div class="mx-auto max-w-6xl p-6 font-display">
+  <div class="grid grid-cols-1">
+    <div class="text-center font-bold">
+      <h1
+        class="text-2xl text-fill-transparent text-stroke-white text-stroke-2"
+      >
+        <span> APPLICATIONS</span>
+        <span class="whitespace-nowrap"> OPEN IN</span>
+      </h1>
+
+      <div class="text-7xl">
+        <Counter client:load endTime={end.unix()} />
+      </div>
+    </div>
+
+    <div class="mx-auto p-10">
+      <Image src={chestAsset} alt="Treasure Chest" class="w-64" />
+    </div>
+  </div>
+</div>
