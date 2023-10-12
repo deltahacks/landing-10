@@ -12,6 +12,7 @@ import ResponsiveImage, {
 const logoList: Array<{
   image: ResponsiveImageItem;
   divClass: string;
+  link?: string;
 }> = [
   {
     image: {
@@ -19,9 +20,11 @@ const logoList: Array<{
       src: voiceFlowLogo,
       alt: "Voiceflow",
       srcs: await getImgSrcs(voiceFlowLogo, [628, 1080]),
+
       sizes:
         "(min-width: 820px) 314px, (min-width: 640px) 40vw, calc(100vw - 80px)",
     },
+    link: "https://www.voiceflow.com/",
     divClass: "col-span-6",
   },
   {
@@ -31,6 +34,7 @@ const logoList: Array<{
       alt: "Verbwire",
       srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
     },
+    link: "https://www.verbwire.com/",
     divClass: "col-span-6",
   },
 ];
@@ -61,12 +65,12 @@ for (let i = 0; i < 6; i++) {
 ---
 
 <div class="container flex max-w-3xl flex-col items-center text-[#2D9AEA]">
-  <h1 class="mb-10 text-center font-display text-6xl font-bold">
+  <h2 class="mb-10 text-center font-display text-6xl font-bold">
     <span class="text-fill-transparent text-stroke-white text-stroke-2"
       >MEET OUR</span
     >
      SPONSORS
-  </h1>
+  </h2>
 
   <!-- Grid container -->
   <div class="grid grid-cols-12 gap-5">
@@ -76,13 +80,19 @@ for (let i = 0; i < 6; i++) {
           logo && (
             // add extra classes as an override
             // TODO: consider adding `classnames` package in the future if this gets more complicated
-            <div class={logo.divClass + " h-full bg-white bg-opacity-20 p-5"}>
-              <ResponsiveImage
-                image={{
-                  ...logo.image,
-                }}
-              />
-            </div>
+            <a
+              href={logo.link ?? "javascript:;"}
+              class={logo.divClass + " h-full"}
+              target={logo.link ? "_blank" : undefined}
+            >
+              <div class={logo.divClass + " h-full bg-white bg-opacity-20 p-5"}>
+                <ResponsiveImage
+                  image={{
+                    ...logo.image,
+                  }}
+                />
+              </div>
+            </a>
           ),
       )
     }
