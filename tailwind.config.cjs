@@ -15,5 +15,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-text-fill-stroke")()],
+  plugins: [
+    require("tailwindcss-text-fill-stroke")(),
+    require("@headlessui/tailwindcss"),
+  ],
 };
