@@ -52,7 +52,7 @@ const links: Array<{
       </h1>
 
       <div class="text-7xl md:text-9xl">
-        <Counter client:load endTime={end.unix()} />
+        <Counter client:only="react" endTime={end.unix()} />
       </div>
     </div>
 
