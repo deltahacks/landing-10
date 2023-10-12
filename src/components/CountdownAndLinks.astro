@@ -17,19 +17,19 @@ const links: Array<{
     link: "foo",
   },
   {
-    text: "Instagram",
-    link: "https://www.instagram.com/deltahacks/",
-  },
-  {
     text: "Travel Guidlines",
     link: "foo",
   },
   {
-    text: "Discord",
+    text: "GitHub",
     link: "foo",
   },
   {
-    text: "GitHub",
+    text: "Instagram",
+    link: "https://www.instagram.com/deltahacks/",
+  },
+  {
+    text: "Discord",
     link: "foo",
   },
   {
@@ -40,25 +40,29 @@ const links: Array<{
 ---
 
 <div class="mx-auto max-w-6xl p-6 font-display">
-  <div class="grid grid-cols-1">
-    <div class="text-center font-bold">
+  <div
+    class="grid grid-cols-1 lg:-mb-24 lg:grid-cols-3 lg:grid-rows-2 lg:gap-y-6"
+  >
+    <div class="text-center font-bold md:col-span-2 lg:text-left">
       <h1
-        class="text-2xl text-fill-transparent text-stroke-white text-stroke-2"
+        class="text-2xl text-fill-transparent text-stroke-white text-stroke-2 md:whitespace-nowrap md:text-6xl"
       >
         <span> APPLICATIONS</span>
         <span class="whitespace-nowrap"> OPEN IN</span>
       </h1>
 
-      <div class="text-7xl">
+      <div class="text-7xl md:text-9xl">
         <Counter client:load endTime={end.unix()} />
       </div>
     </div>
 
-    <div class="mx-auto p-10">
-      <Image src={chestAsset} alt="Treasure Chest" class="w-64" />
+    <div class="mx-auto p-10 md:row-span-2 md:px-5 lg:py-0">
+      <Image src={chestAsset} alt="Treasure Chest" class="w-64 lg:w-[360px]" />
     </div>
 
-    <div class="grid grid-cols-2 gap-x-20 gap-y-2">
+    <div
+      class="grid grid-flow-col grid-rows-3 gap-y-2 md:col-span-2 md:auto-rows-min md:grid-rows-2 md:gap-x-5 md:px-10 lg:px-0 lg:pb-28 lg:pr-14"
+    >
       {
         links.map(({ text, link }) => (
           <div class="whitespace-nowrap text-xl underline underline-offset-4">
