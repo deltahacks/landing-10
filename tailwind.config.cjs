@@ -14,9 +14,6 @@ module.exports = {
         "dh-blue": "#2D9AEA",
       },
     },
-    fontSize: {
-      title: "2.5rem",
-    },
   },
   plugins: [require("tailwindcss-text-fill-stroke")()],
 };

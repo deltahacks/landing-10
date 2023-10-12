@@ -1,19 +1,16 @@
 ---
-import Navbar from "./Navbar.astro";
+
 ---
 
 <div
-  class="h-screen bg-[url('/background_simplified.svg')] bg-center p-8 sm:justify-normal sm:bg-cover"
+  class="h-screen bg-[url('/background_simplified.svg')] bg-center py-8 sm:justify-normal sm:bg-cover"
 >
-  <div class="fixed top-10 z-50 box-content w-full backdrop-blur-md">
-    <Navbar />
-  </div>
   <div
-    class="flex h-full flex-col justify-between overflow-hidden p-4 pt-36 sm:justify-normal sm:gap-24 sm:pt-24"
+    class="mx-6 flex h-full max-w-6xl flex-col justify-between overflow-hidden pt-36 drop-shadow-2xl sm:justify-normal sm:gap-24 sm:pt-32 xl:mx-auto"
   >
     <div class="z-10">
       <h1
-        class="text-title font-extrabold leading-tight tracking-tight drop-shadow-2xl sm:text-7xl sm:leading-normal md:text-8xl lg:text-9xl"
+        class="sm:text-7xl md:text-8xl lg:text-9xl text-5xl font-extrabold leading-tight tracking-tight sm:leading-normal"
       >
         DELTA<wbr />HACKS<span class="text-rose-600">X</span>
       </h1>
@@ -28,17 +25,17 @@ import Navbar from "./Navbar.astro";
 
     <!-- RGBA(19, 77, 84, 1) -->
     <div
-      class="z-10 flex w-full flex-col gap-4 text-center text-xl font-semibold sm:w-3/4 sm:flex-row lg:w-1/2"
+      class="text-xl z-10 flex w-full flex-col gap-4 text-center font-semibold sm:w-3/4 sm:flex-row lg:w-1/2"
     >
       <a
         href="https://portal.deltahacks.com/"
-        class="w-full bg-white py-4 text-center text-black sm:border-4 sm:border-white sm:bg-transparent sm:text-white sm:shadow-[0px_0px_35px_-15px_rgba(0,0,0,0.5)]"
+        class="w-full bg-white/90 py-5 text-center text-black sm:border-4 sm:border-white sm:bg-transparent sm:text-white sm:shadow-[0px_0px_35px_-15px_rgba(0,0,0,0.5)]"
       >
         VIEW SCHEDULE</a
       >
       <a
         href="https://portal.deltahacks.com/"
-        class="w-full border-transparent bg-rose-600 py-4 text-center sm:border-4"
+        class="w-full border-transparent bg-rose-600 py-5 text-center sm:border-4"
       >
         APPLY TO ATTEND</a
       >

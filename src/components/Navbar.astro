@@ -3,13 +3,13 @@ import { Image } from "astro:assets";
 ---
 
 <div
-  class="align-center flex h-16 justify-between bg-[#19333A] bg-opacity-40 px-6 py-4 backdrop-blur-xl md:px-8"
+  class="mx-6 flex max-w-6xl items-center justify-between bg-[#19333A] bg-opacity-40 px-6 py-5 backdrop-blur-xl md:px-8 xl:mx-auto"
 >
-  <div class="w-12 pt-1">
+  <div class="">
     <Image width="24" height="24" class="h-6" src="/nav_logo.svg" alt="logo" />
   </div>
   <div
-    class="hidden w-full justify-between px-12 text-lg text-white md:flex lg:w-1/2 lg:px-0 xl:text-2xl"
+    class="text-xl md:text-base hidden w-full max-w-lg justify-between px-12 text-white md:flex lg:px-0"
   >
     <p>About</p>
     <p>Statistics</p>
@@ -18,10 +18,10 @@ import { Image } from "astro:assets";
     <p>FAQ</p>
     <p>Links</p>
   </div>
-  <div class="hidden pt-1 md:flex">
+  <div class="hidden md:flex md:items-center md:gap-4">
     <a href="https://www.linkedin.com/company/deltahacks/mycompany/"
       ><Image
-        class="ml-4"
+        class=""
         width="24"
         height="24"
         src="/nav_linkedin.svg"
@@ -30,7 +30,7 @@ import { Image } from "astro:assets";
     >
     <a href="https://www.instagram.com/deltahacks">
       <Image
-        class="ml-4"
+        class=""
         width="24"
         height="24"
         src="/nav_insta.svg"
@@ -39,7 +39,7 @@ import { Image } from "astro:assets";
     >
     <a href="https://twitter.com/deltaHacks"
       ><Image
-        class="ml-4"
+        class=""
         width="24"
         height="24"
         src="/nav_twitter.svg"
@@ -47,7 +47,7 @@ import { Image } from "astro:assets";
       /></a
     >
   </div>
-  <div class="flex md:hidden">
+  <div class="md:hidden">
     <Image width="24" height="24" src="/nav_sizing.svg" alt="NAV" />
   </div>
 </div>

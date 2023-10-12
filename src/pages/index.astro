@@ -5,12 +5,16 @@ import Layout from "../layouts/main.astro";
 import Hero from "../components/Hero.astro";
 import WhoAreWe from "../components/WhoAreWe.astro";
 import Sponsors from "../components/Sponsors.astro";
+import Navbar from "../components/Navbar.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <Layout>
+  <div class="fixed top-10 z-50 box-content w-full">
+    <Navbar />
+  </div>
   <Hero />
   <WhoAreWe />
   <p class="px-10 pt-10">
