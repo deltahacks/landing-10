@@ -1,8 +1,32 @@
 ---
+import type { ReactImageGalleryItem } from "react-image-gallery";
 import { Carousel } from "./react/Carousel.tsx";
+
+const images: ReactImageGalleryItem[] = [
+  {
+    original: "https://picsum.photos/id/1018/1000/600/",
+    thumbnail: "https://picsum.photos/id/1018/250/150/",
+    description: "Placeholder Image 1",
+  },
+  {
+    original: "https://picsum.photos/id/1015/1000/600/",
+    thumbnail: "https://picsum.photos/id/1015/250/150/",
+    description: "Placeholder Image 2",
+  },
+  {
+    original: "https://picsum.photos/id/1019/1000/600/",
+    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    description: "Placeholder Image 3",
+  },
+];
 ---
 
 <div>
-  <h2></h2>
-  <Carousel client:visible />
+  <h2 class="mb-10 text-center font-display text-6xl font-bold text-dh-red">
+    <span class="text-fill-transparent text-stroke-white text-stroke-2"
+      >TOAST TO</span
+    >
+     ONE DECADE
+  </h2>
+  <Carousel client:visible images={images} />
 </div>

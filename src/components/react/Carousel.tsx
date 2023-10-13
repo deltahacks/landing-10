@@ -1,26 +1,11 @@
 import "react-image-gallery/styles/css/image-gallery.css";
 
-import ImageGallery from "react-image-gallery";
+import ImageGallery, { type ReactImageGalleryItem } from "react-image-gallery";
 
-const images = [
-  {
-    original: "https://picsum.photos/id/1018/1000/600/",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-];
-
-export const Carousel = () => {
+export const Carousel = (props: { images: ReactImageGalleryItem[] }) => {
   return (
     <ImageGallery
-      items={images}
+      items={props.images}
       showThumbnails={false}
       showFullscreenButton={false}
       autoPlay={true}
