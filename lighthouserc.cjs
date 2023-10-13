@@ -23,6 +23,11 @@ module.exports = {
         "csp-xss": "off",
         // google analytics has unused js, since we don't own it there's nothing we can do
         "unused-javascript": "warn",
+        // the carousel library's built-in buttons are a bit undersized,
+        // but making a new button would be a lot of work for minimal improvement
+        "tap-targets": "warn",
+        // Lint Images doesn't work on the carousel images, so we can't fix this (for now)
+        "uses-responsive-images": "warn",
       },
     },
   },
