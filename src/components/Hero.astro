@@ -3,14 +3,23 @@
 ---
 
 <div
-  class="h-screen bg-[url('/background_simplified.svg')] bg-center py-8 sm:justify-normal sm:bg-cover"
+  class="h-screen bg-[url('/background_simplified.svg')] bg-cover bg-bottom py-8 sm:justify-normal sm:bg-cover"
 >
+  <div
+    class="absolute bottom-0 w-full overflow-x-hidden pt-[50%] md:bottom-[5%] md:left-[45%] md:w-[45%]"
+  >
+    <img
+      src="/hero_logo.svg"
+      class="relative bottom-0 scale-150 sm:scale-100"
+      alt=""
+    />
+  </div>
   <div
     class="mx-6 flex h-full max-w-6xl flex-col justify-between overflow-hidden pt-36 drop-shadow-2xl sm:justify-normal sm:gap-24 sm:pt-32 xl:mx-auto"
   >
     <div class="z-10">
       <h1
-        class="sm:text-7xl md:text-8xl lg:text-9xl text-5xl font-extrabold leading-tight tracking-tight sm:leading-normal"
+        class="text-5xl font-extrabold leading-tight tracking-tight sm:text-7xl sm:leading-normal md:text-8xl lg:text-9xl"
       >
         DELTA<wbr />HACKS<span class="text-rose-600">X</span>
       </h1>
@@ -25,7 +34,7 @@
 
     <!-- RGBA(19, 77, 84, 1) -->
     <div
-      class="text-xl z-10 flex w-full flex-col gap-4 text-center font-semibold sm:w-3/4 sm:flex-row lg:w-1/2"
+      class="z-10 flex w-full flex-col gap-4 text-center text-xl font-semibold sm:w-3/4 sm:flex-row lg:w-1/2"
     >
       <a
         href="https://portal.deltahacks.com/"
@@ -40,10 +49,10 @@
         APPLY TO ATTEND</a
       >
     </div>
-    <img
+    <!-- <img
       src=""
       alt=""
       class="w[100px] absolute z-0 m-32 p-2 sm:bottom-0 sm:right-0 sm:w-96"
-    />
+    /> -->
   </div>
 </div>
