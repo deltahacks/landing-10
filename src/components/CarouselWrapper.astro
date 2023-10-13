@@ -2,26 +2,37 @@
 import type { ReactImageGalleryItem } from "react-image-gallery";
 import { Carousel } from "./react/Carousel.tsx";
 
-const images: ReactImageGalleryItem[] = [
-  {
-    original: "https://picsum.photos/id/1018/1000/600/",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
-    originalAlt: "Placeholder Image 1",
-    description: "Placeholder Image 1",
-  },
-  {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
-    originalAlt: "Placeholder Image 2",
-    description: "Placeholder Image 2",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-    originalAlt: "Placeholder Image 3",
-    description: "Placeholder Image 3",
-  },
-];
+import { getImage } from "astro:assets";
+
+import Img1 from "../assets/carousel/1015-1000x600.jpg";
+import Img2 from "../assets/carousel/1018-1000x600.jpg";
+import Img3 from "../assets/carousel/1019-1000x600.jpg";
+
+const images: ReactImageGalleryItem[] = await Promise.all(
+  [
+    {
+      image: Img1,
+      description: "Placeholder Image 1",
+    },
+    {
+      image: Img2,
+      description: "Placeholder Image 2",
+    },
+    {
+      image: Img3,
+      description: "Placeholder Image 3",
+    },
+  ].map(async (image) => {
+    const img = await getImage(image.image);
+
+    return {
+      ...image,
+      original: img.src,
+      width: img.attributes.width,
+      height: img.attributes.height,
+    };
+  }),
+);
 ---
 
 <div>
