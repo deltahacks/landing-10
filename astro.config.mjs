@@ -7,9 +7,14 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), partytown({
-    config: {
-      forward: ["dataLayer.push"]
-    }
-  }), react(), critters()]
+  integrations: [
+    tailwind(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+    critters(),
+    react(),
+  ],
 });
