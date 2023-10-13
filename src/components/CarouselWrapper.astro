@@ -12,14 +12,17 @@ const images: ReactImageGalleryItem[] = await Promise.all(
   [
     {
       image: Img1,
+      originalAlt: "Placeholder Image 1",
       description: "Placeholder Image 1",
     },
     {
       image: Img2,
+      originalAlt: "Placeholder Image 2",
       description: "Placeholder Image 2",
     },
     {
       image: Img3,
+      originalAlt: "Placeholder Image 3",
       description: "Placeholder Image 3",
     },
   ].map(async (image) => {
@@ -28,8 +31,8 @@ const images: ReactImageGalleryItem[] = await Promise.all(
     return {
       ...image,
       original: img.src,
-      width: img.attributes.width,
-      height: img.attributes.height,
+      originalHeight: img.attributes.height,
+      originalWidth: img.attributes.width,
     };
   }),
 );
