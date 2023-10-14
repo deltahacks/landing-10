@@ -4,7 +4,7 @@ import Coin2_orange_shiny from "../assets/Coin2_orange_shiny.svg";
 ---
 
 <div
-  class="m-auto flex min-h-screen max-w-6xl flex-col justify-center py-4 lg:p-6"
+  class="m-auto flex min-h-screen max-w-6xl flex-col justify-center p-4 lg:p-6"
 >
   <div class="mx-auto grid grid-flow-row gap-2 text-center font-display">
     <p class="text-xl font-extrabold text-white md:text-2xl">
@@ -24,18 +24,18 @@ import Coin2_orange_shiny from "../assets/Coin2_orange_shiny.svg";
 
   <!-- Coins -->
   <div
-    class="relative h-full w-full content-center py-10 lg:max-w-6xl lg:px-0 lg:py-5"
+    class="relative h-fit w-full content-center py-10 lg:h-full lg:max-w-6xl lg:px-0 lg:py-5"
   >
     <div
-      class="mx-auto grid w-fit grid-cols-1 items-center lg:w-full lg:grid-cols-4 lg:items-start lg:justify-items-center"
+      class="mx-auto grid w-full grid-cols-1 lg:grid-cols-4 lg:items-start lg:justify-items-center"
     >
       <!-- coin 1 -->
-      <!-- translate -->
-      <div class="z-50 pr-14 lg:pr-0">
+      <!-- position -->
+      <div class="z-50 -mb-8 pl-4 lg:mb-0 lg:pl-0">
         <!-- rotate -->
-        <div class="-rotate-[15deg]">
+        <div class="w-fit -rotate-[15deg]">
           <!-- container with coin + text -->
-          <div class="relative w-[250px]">
+          <div class="relative w-60 lg:w-[250px]">
             <Image
               src={Coin2_orange_shiny}
               alt="800 Hackers"
@@ -52,12 +52,14 @@ import Coin2_orange_shiny from "../assets/Coin2_orange_shiny.svg";
       </div>
 
       <!-- coin 2 -->
-      <!-- translate -->
-      <div class="z-40 pl-[80px] lg:pl-0 lg:pt-20">
+      <!-- position -->
+      <div
+        class="z-40 -mb-[68px] justify-self-end lg:mb-0 lg:justify-self-auto lg:pl-0 lg:pt-20"
+      >
         <!-- rotate -->
-        <div class="rotate-[9.3deg]">
+        <div class="w-fit rotate-[9.3deg]">
           <!-- container with coin + text -->
-          <div class="relative w-[250px]">
+          <div class="relative w-60 lg:w-[250px]">
             <Image
               src={Coin2_orange_shiny}
               alt="800 Hackers"
@@ -74,12 +76,12 @@ import Coin2_orange_shiny from "../assets/Coin2_orange_shiny.svg";
       </div>
 
       <!-- coin 3 -->
-      <!-- translate -->
-      <div class="z-30 pl-6 lg:pl-0 lg:pt-10">
+      <!-- position -->
+      <div class="z-30 -mb-9 pl-2 lg:mb-0 lg:pl-0 lg:pt-10">
         <!-- rotate -->
-        <div class="rotate-[4.8deg]">
+        <div class="w-fit rotate-[4.8deg]">
           <!-- container with coin + text -->
-          <div class="relative w-[250px]">
+          <div class="relative w-60 lg:w-[250px]">
             <Image
               src={Coin2_orange_shiny}
               alt="800 Hackers"
@@ -96,12 +98,14 @@ import Coin2_orange_shiny from "../assets/Coin2_orange_shiny.svg";
       </div>
 
       <!-- coin 4 -->
-      <!-- translate -->
-      <div class="z-20 pl-20 lg:pl-0 lg:pt-20">
+      <!-- position -->
+      <div
+        class="z-20 justify-self-end pr-5 lg:justify-self-auto lg:pr-0 lg:pt-20"
+      >
         <!-- rotate -->
-        <div class="-rotate-[15.45deg]">
+        <div class="w-fit -rotate-[15.45deg]">
           <!-- container with coin + text -->
-          <div class="relative w-[250px]">
+          <div class="relative w-60 lg:w-[250px]">
             <Image
               src={Coin2_orange_shiny}
               alt="800 Hackers"
