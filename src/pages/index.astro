@@ -3,6 +3,7 @@ import Layout from "../layouts/main.astro";
 // Component Imports
 // import Button from '../components/Button.astro';
 import Hero from "../components/Hero.astro";
+import Community from "../components/Community.astro";
 import WhoAreWe from "../components/WhoAreWe.astro";
 import Sponsors from "../components/Sponsors.astro";
 import Navbar from "../components/Navbar.astro";
@@ -20,14 +21,13 @@ import Footer from "../components/Footer.astro";
   </div>
   <Hero />
   <WhoAreWe />
+  <Community />
   <p class="px-10 pt-10">
     This site is still under construction! If you stumble across this, please
     check back later! orz
   </p>
-  <div class="flex w-full flex-col items-center">
-    <Sponsors />
-    <FAQ />
-  </div>
+  <Sponsors />
+  <FAQ />
   <CoundownAndLinks />
   <Footer />
 </Layout>
