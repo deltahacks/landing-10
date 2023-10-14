@@ -1,6 +1,8 @@
 ---
 import Question from "./Question";
 
+const { id } = Astro.props;
+
 const questions: Array<{
   question: string;
   answer: string;
@@ -59,6 +61,7 @@ const questions: Array<{
 ---
 
 <div
+  id={id}
   class="container mx-auto flex h-fit min-h-screen max-w-3xl flex-col items-center justify-center p-6 text-white lg:max-w-6xl"
 >
   <h2

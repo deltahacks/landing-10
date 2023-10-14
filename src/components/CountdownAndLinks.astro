@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import chestAsset from "../assets/treasure-chest.svg";
 
+const { id } = Astro.props;
+
 // ----- countdown -----
 import dayjs from "dayjs";
 import { Counter } from "./Counter";
@@ -40,6 +42,7 @@ const links: Array<{
 ---
 
 <div
+  id={id}
   class="mx-auto flex h-fit min-h-screen max-w-6xl flex-col justify-center p-6 font-display"
 >
   <div

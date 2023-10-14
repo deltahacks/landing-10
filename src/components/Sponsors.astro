@@ -4,6 +4,8 @@ import voiceFlowLogo from "../assets/sponsor_logos/voiceflow.png";
 import verbwireLogo from "../assets/sponsor_logos/verbwire.svg";
 import placeholder from "../assets/sponsor_logos/placeholder.png";
 
+const { id } = Astro.props;
+
 import ResponsiveImage, {
   getImgSrcs,
   type ResponsiveImageItem,
@@ -65,6 +67,7 @@ for (let i = 0; i < 6; i++) {
 ---
 
 <div
+  id={id}
   class="container mx-auto flex h-fit min-h-screen w-full max-w-3xl flex-col items-center justify-center p-6 text-[#2D9AEA] lg:max-w-6xl"
 >
   <h2
