@@ -1,0 +1,123 @@
+---
+import { Image } from "astro:assets";
+import Coin2_orange_shiny from "../assets/Coin2_orange_shiny.svg";
+---
+
+<div class="m-auto flex min-h-screen max-w-6xl flex-col justify-center p-6">
+  <div class="mx-auto grid grid-flow-row gap-2 text-center font-display">
+    <p class="text-xl font-extrabold text-white md:text-2xl">
+      Come to DeltaHacks X to
+    </p>
+    <h1 class="leading-none">
+      <div
+        class="text-4xl font-black text-fill-transparent text-stroke-white text-stroke-2 md:text-6xl"
+      >
+        JOIN A GROWING
+      </div>
+      <div class="text-[52px] font-bold text-yellow-400 md:text-7xl">
+        COMMUNITY
+      </div>
+    </h1>
+  </div>
+
+  <!-- Coins -->
+  <div
+    class="relative mx-auto h-fit w-[340px] content-center py-10 lg:h-full lg:w-full lg:max-w-6xl lg:px-0 lg:py-5"
+  >
+    <div
+      class="mx-auto grid w-full grid-cols-1 font-bold lg:grid-cols-4 lg:items-start lg:justify-items-center"
+    >
+      <!-- coin 1 -->
+      <!-- position -->
+      <div class="z-50 -mb-8 pl-4 lg:mb-0 lg:pl-0">
+        <!-- rotate -->
+        <div class="w-fit -rotate-[15deg]">
+          <!-- container with coin + text -->
+          <div class="relative w-60 lg:w-[250px]">
+            <Image
+              src={Coin2_orange_shiny}
+              alt="800 Hackers"
+              class="w-full drop-shadow-[0_75px_30px_rgba(0,0,0,0.3)]"
+            />
+            <div
+              class="absolute top-0 flex h-full w-full flex-col items-center justify-center text-center"
+            >
+              <div class="font-display text-7xl">800</div>
+              <div class="font-sans text-3xl">HACKERS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- coin 2 -->
+      <!-- position -->
+      <div
+        class="z-40 -mb-14 justify-self-end lg:mb-0 lg:justify-self-auto lg:pl-0 lg:pt-20"
+      >
+        <!-- rotate -->
+        <div class="w-fit rotate-[9.3deg]">
+          <!-- container with coin + text -->
+          <div class="relative w-60 lg:w-[250px]">
+            <Image
+              src={Coin2_orange_shiny}
+              alt="200 Projects"
+              class="w-full drop-shadow-[0_75px_30px_rgba(0,0,0,0.3)]"
+            />
+            <div
+              class="absolute top-0 flex h-full w-full flex-col items-center justify-center text-center"
+            >
+              <div class="font-display text-7xl">200</div>
+              <div class="font-sans text-3xl">PROJECTS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- coin 3 -->
+      <!-- position -->
+      <div class="z-30 -mb-8 pl-2 lg:mb-0 lg:pl-0 lg:pt-10">
+        <!-- rotate -->
+        <div class="w-fit rotate-[4.8deg]">
+          <!-- container with coin + text -->
+          <div class="relative w-60 lg:w-[250px]">
+            <Image
+              src={Coin2_orange_shiny}
+              alt="300 Commits"
+              class="w-full drop-shadow-[0_75px_30px_rgba(0,0,0,0.3)]"
+            />
+            <div
+              class="absolute top-0 flex h-full w-full flex-col items-center justify-center text-center"
+            >
+              <div class="font-display text-7xl">300</div>
+              <div class="font-sans text-3xl">COMMITS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- coin 4 -->
+      <!-- position -->
+      <div
+        class="z-20 justify-self-end pr-5 lg:justify-self-auto lg:pr-0 lg:pt-20"
+      >
+        <!-- rotate -->
+        <div class="w-fit -rotate-[15.45deg]">
+          <!-- container with coin + text -->
+          <div class="relative w-60 lg:w-[250px]">
+            <Image
+              src={Coin2_orange_shiny}
+              alt="55 Mentors"
+              class="w-full drop-shadow-[0_75px_30px_rgba(0,0,0,0.3)]"
+            />
+            <div
+              class="absolute top-0 flex h-full w-full flex-col items-center justify-center text-center"
+            >
+              <div class="font-display text-7xl">55</div>
+              <div class="font-sans text-3xl">MENTORS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

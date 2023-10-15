@@ -3,6 +3,7 @@ import Layout from "../layouts/main.astro";
 // Component Imports
 // import Button from '../components/Button.astro';
 import Hero from "../components/Hero.astro";
+import Community from "../components/Community.astro";
 import WhoAreWe from "../components/WhoAreWe.astro";
 import Sponsors from "../components/Sponsors.astro";
 import CarouselWrapper from "../components/CarouselWrapper.astro";
@@ -17,11 +18,10 @@ import Footer from "../components/Footer.astro";
 <Layout>
   <Hero />
   <WhoAreWe />
+  <Community />
   <CarouselWrapper />
-  <div class="flex w-full flex-col items-center">
-    <Sponsors />
-    <FAQ />
-  </div>
+  <Sponsors />
+  <FAQ />
   <CoundownAndLinks />
   <Footer />
 </Layout>
