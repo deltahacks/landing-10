@@ -26,7 +26,7 @@ const images: ReactImageGalleryItem[] = await Promise.all(
       description: "Placeholder Image 3",
     },
   ].map(async (image) => {
-    const img = await getImage(image.image);
+    const img = await getImage({ src: image.image });
 
     return {
       ...image,
