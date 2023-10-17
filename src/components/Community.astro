@@ -7,21 +7,19 @@ const { id } = Astro.props;
 
 <div
   id={id}
-  class="m-auto flex min-h-screen max-w-6xl flex-col justify-center p-6"
+  class="m-auto flex min-h-screen max-w-6xl flex-col items-center justify-center p-6"
 >
-  <div class="mx-auto grid grid-flow-row gap-2 text-center font-display">
+  <div class="grid grid-flow-row gap-2 text-center font-display">
     <p class="text-xl font-extrabold text-white md:text-2xl">
       Come to DeltaHacks X to
     </p>
     <h1 class="leading-none">
-      <div
+      <p
         class="text-4xl font-black text-fill-transparent text-stroke-white text-stroke-2 md:text-6xl"
       >
         JOIN A GROWING
-      </div>
-      <div class="text-[52px] font-bold text-yellow-400 md:text-7xl">
-        COMMUNITY
-      </div>
+      </p>
+      <p class="text-[52px] font-bold text-yellow-400 md:text-7xl">COMMUNITY</p>
     </h1>
   </div>
 
