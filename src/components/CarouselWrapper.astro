@@ -8,6 +8,8 @@ import Img1 from "../assets/carousel/1015-1000x600.jpg";
 import Img2 from "../assets/carousel/1018-1000x600.jpg";
 import Img3 from "../assets/carousel/1019-1000x600.jpg";
 
+const { id } = Astro.props;
+
 const images: ReactImageGalleryItem[] = await Promise.all(
   [
     {
@@ -38,7 +40,7 @@ const images: ReactImageGalleryItem[] = await Promise.all(
 );
 ---
 
-<div class="mb-10">
+<div id={id} class="mb-10">
   <h2 class="mb-10 text-center font-display text-6xl font-bold text-dh-red">
     <span
       class="block text-4xl text-fill-transparent text-stroke-white text-stroke-2 md:inline md:text-6xl"
