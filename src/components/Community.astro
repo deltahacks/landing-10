@@ -3,33 +3,33 @@ import { Image } from "astro:assets";
 import Coin2_orange_shiny from "../assets/Coin2_orange_shiny.svg";
 ---
 
-<div class="m-auto flex min-h-screen max-w-6xl flex-col justify-center p-6">
-  <div class="mx-auto grid grid-flow-row gap-2 text-center font-display">
+<div
+  class="m-auto flex min-h-screen max-w-6xl flex-col items-center justify-center p-6"
+>
+  <div class="grid grid-flow-row gap-2 text-center font-display">
     <p class="text-xl font-extrabold text-white md:text-2xl">
       Come to DeltaHacks X to
     </p>
     <h1 class="leading-none">
-      <div
+      <p
         class="text-4xl font-black text-fill-transparent text-stroke-white text-stroke-2 md:text-6xl"
       >
         JOIN A GROWING
-      </div>
-      <div class="text-[52px] font-bold text-yellow-400 md:text-7xl">
-        COMMUNITY
-      </div>
+      </p>
+      <p class="text-[52px] font-bold text-yellow-400 md:text-7xl">COMMUNITY</p>
     </h1>
   </div>
 
   <!-- Coins -->
   <div
-    class="relative mx-auto h-fit w-[340px] content-center py-10 lg:h-full lg:w-full lg:max-w-6xl lg:px-0 lg:py-5"
+    class="relative mx-auto h-fit w-full max-w-[340px] content-center py-10 lg:h-full lg:max-w-6xl lg:py-5"
   >
     <div
       class="mx-auto grid w-full grid-cols-1 font-bold lg:grid-cols-4 lg:items-start lg:justify-items-center"
     >
       <!-- coin 1 -->
       <!-- position -->
-      <div class="z-50 -mb-8 pl-4 lg:mb-0 lg:pl-0">
+      <div class="z-30 -mb-8 pl-4 lg:mb-0 lg:pl-0">
         <!-- rotate -->
         <div class="w-fit -rotate-[15deg]">
           <!-- container with coin + text -->
@@ -52,7 +52,7 @@ import Coin2_orange_shiny from "../assets/Coin2_orange_shiny.svg";
       <!-- coin 2 -->
       <!-- position -->
       <div
-        class="z-40 -mb-14 justify-self-end lg:mb-0 lg:justify-self-auto lg:pl-0 lg:pt-20"
+        class="z-20 -mb-14 justify-self-end lg:mb-0 lg:justify-self-auto lg:pl-0 lg:pt-20"
       >
         <!-- rotate -->
         <div class="w-fit rotate-[9.3deg]">
@@ -75,7 +75,7 @@ import Coin2_orange_shiny from "../assets/Coin2_orange_shiny.svg";
 
       <!-- coin 3 -->
       <!-- position -->
-      <div class="z-30 -mb-8 pl-2 lg:mb-0 lg:pl-0 lg:pt-10">
+      <div class="z-10 -mb-8 pl-2 lg:mb-0 lg:pl-0 lg:pt-10">
         <!-- rotate -->
         <div class="w-fit rotate-[4.8deg]">
           <!-- container with coin + text -->
@@ -97,9 +97,7 @@ import Coin2_orange_shiny from "../assets/Coin2_orange_shiny.svg";
 
       <!-- coin 4 -->
       <!-- position -->
-      <div
-        class="z-20 justify-self-end pr-5 lg:justify-self-auto lg:pr-0 lg:pt-20"
-      >
+      <div class="justify-self-end pr-5 lg:justify-self-auto lg:pr-0 lg:pt-20">
         <!-- rotate -->
         <div class="w-fit -rotate-[15.45deg]">
           <!-- container with coin + text -->
