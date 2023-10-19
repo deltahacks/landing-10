@@ -1,0 +1,53 @@
+---
+import type { ReactImageGalleryItem } from "react-image-gallery";
+import { Carousel } from "./react/Carousel.tsx";
+
+import { getImage } from "astro:assets";
+
+import Img1 from "../assets/carousel/1015-1000x600.jpg";
+import Img2 from "../assets/carousel/1018-1000x600.jpg";
+import Img3 from "../assets/carousel/1019-1000x600.jpg";
+
+const images: ReactImageGalleryItem[] = await Promise.all(
+  [
+    {
+      image: Img1,
+      originalAlt: "Placeholder Image 1",
+      description: "Placeholder Image 1",
+    },
+    {
+      image: Img2,
+      originalAlt: "Placeholder Image 2",
+      description: "Placeholder Image 2",
+    },
+    {
+      image: Img3,
+      originalAlt: "Placeholder Image 3",
+      description: "Placeholder Image 3",
+    },
+  ].map(async (image) => {
+    const img = await getImage({ src: image.image });
+
+    return {
+      ...image,
+      original: img.src,
+      originalHeight: img.attributes.height,
+      originalWidth: img.attributes.width,
+    };
+  }),
+);
+---
+
+<div class="mb-10">
+  <h2 class="mb-10 text-center font-display text-6xl font-bold text-dh-red">
+    <span
+      class="block text-4xl text-fill-transparent text-stroke-white text-stroke-2 md:inline md:text-6xl"
+    >
+      TOAST TO
+    </span>
+     ONE DECADE
+  </h2>
+  <div class="px-7">
+    <Carousel client:only="react" images={images} />
+  </div>
+</div>
