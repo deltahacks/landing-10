@@ -5,7 +5,7 @@ import chestAsset from "../assets/treasure-chest.svg";
 // ----- countdown -----
 import dayjs from "dayjs";
 import { Counter } from "./Counter";
-const end = dayjs(new Date("2023-10-15 23:59:59")); // temporary deadline for testing
+const end = dayjs(new Date("2023-10-20 23:59:59")); // temporary deadline for testing
 
 // ----- links -----
 const links: Array<{
@@ -14,23 +14,19 @@ const links: Array<{
 }> = [
   {
     text: "Code of Conduct",
-    link: "foo",
+    link: "https://static.mlh.io/docs/mlh-code-of-conduct.pdf",
   },
-  {
-    text: "Travel Guidlines",
-    link: "foo",
-  },
+  //   {
+  //     text: "Travel Guidelines",
+  //     link: "/",
+  //   },
   {
     text: "GitHub",
-    link: "foo",
+    link: "https://github.com/deltahacks",
   },
   {
     text: "Instagram",
     link: "https://www.instagram.com/deltahacks/",
-  },
-  {
-    text: "Discord",
-    link: "foo",
   },
   {
     text: "LinkedIn",
@@ -45,6 +41,8 @@ const links: Array<{
   <div
     class="grid grid-cols-1 lg:-mb-24 lg:grid-cols-3 lg:grid-rows-2 lg:gap-y-6"
   >
+    <!-- <Counter client:only="react" endTime={end.unix()} /> -->
+
     <div class="text-center font-bold md:col-span-2 lg:text-left">
       <h1
         class="text-2xl text-fill-transparent text-stroke-white text-stroke-2 md:whitespace-nowrap md:text-6xl"
@@ -52,10 +50,7 @@ const links: Array<{
         <span> APPLICATIONS</span>
         <span class="whitespace-nowrap"> OPEN IN</span>
       </h1>
-
-      <div class="text-7xl md:text-9xl">
-        <Counter client:only="react" endTime={end.unix()} />
-      </div>
+      <p class="text-7xl md:text-9xl">TBA</p>
     </div>
 
     <div class="mx-auto p-10 md:row-span-2 md:px-5 lg:py-0">
@@ -63,11 +58,11 @@ const links: Array<{
     </div>
 
     <div
-      class="grid grid-flow-col grid-rows-3 gap-y-2 md:col-span-2 md:auto-rows-min md:grid-rows-2 md:gap-x-5 md:px-10 lg:px-0 lg:pb-28 lg:pr-14"
+      class="grid grid-flow-col grid-rows-2 gap-y-2 md:col-span-2 md:grid-rows-2 md:gap-x-5 md:px-10 lg:px-0 lg:pb-28 lg:pr-14"
     >
       {
         links.map(({ text, link }) => (
-          <div class="whitespace-nowrap text-xl underline underline-offset-4">
+          <div class="whitespace-nowrap font-sans text-xl underline underline-offset-4 opacity-75">
             <a href={link}>{text}</a>
           </div>
         ))
