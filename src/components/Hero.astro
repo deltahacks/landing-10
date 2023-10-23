@@ -2,7 +2,7 @@
 const { id } = Astro.props;
 ---
 
-<link rel="preload" href="/background_simplified.svg" />
+<link rel="preload" as="image" href="/background_simplified.svg" />
 <div
   id={id}
   class="h-screen bg-[url('/background_simplified.svg')] bg-cover bg-bottom py-8 sm:justify-normal sm:bg-cover"
