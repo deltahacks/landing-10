@@ -30,7 +30,14 @@ import "@fontsource/poppins/700.css";
       name="description"
       content="A landing page for McMaster's annual hackathon for change"
     />
-  </head>
+    <style is:global>
+      /* smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style></head
+  >
+
   <body class="bg-[#19333A] text-white">
     <slot />
   </body>

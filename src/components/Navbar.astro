@@ -61,7 +61,7 @@ import { Image } from "astro:assets";
           /></label
         >
       </div>
-      <div class="drawer-side -mx-6 -mt-10 h-screen w-screen">
+      <div class="drawer-side -mx-6 -mt-10 h-screen w-screen opacity-90">
         <ul
           class="menu text-base-content h-screen min-h-full w-screen gap-4 bg-[#19333A] p-4 px-6 text-xl"
         >
@@ -77,17 +77,36 @@ import { Image } from "astro:assets";
             /></label
           >
           <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-          {/* Sidebar content here */}
-          <li><a href="#WhoAreWe">About</a></li>
-          <li><a href="#Community">Statistics</a></li>
-          <li><a href="/">Past Events</a></li>
-          <li><a href="#Sponsers">Sponsors</a></li>
-          <li><a href="#FAQ">FAQ</a></li>
-          <li>
-            <a href="#CountdownAndLinks">Links</a>
-          </li>
+          <div class="text-white">
+            <li>
+              <a href="#" onclick="hideSidebar()">Home</a>
+            </li>
+            <li>
+              <a href="#WhoAreWe" onclick="hideSidebar()">About</a>
+            </li>
+            <li>
+              <a href="#Community" onclick="hideSidebar()">Statistics</a>
+            </li>
+            <li>
+              <a href="#Carousel" onclick="hideSidebar();">Past Events</a>
+            </li>
+            <li>
+              <a href="#Sponsers" onclick="hideSidebar()">Sponsors</a>
+            </li>
+            <li>
+              <a href="#FAQ" onclick="hideSidebar()">FAQ</a>
+            </li>
+          </div>
         </ul>
       </div>
     </div>
   </div>
 </div>
+
+<script is:inline>
+  const hideSidebar = (e) => {
+    document.getElementById("my-drawer-4").checked = false;
+    // continue the event
+    return true;
+  };
+</script>

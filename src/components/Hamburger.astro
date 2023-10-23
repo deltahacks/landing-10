@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div class="md:hidden">
+  <div class="drawer drawer-end">
+    <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content">
+      {/* Page content here */}
+      <label for="my-drawer-4" class="drawer-button"
+        ><Image width="24" height="24" src="/nav_sizing.svg" alt="NAV" /></label
+      >
+    </div>
+    <div class="drawer-side -mx-6 -mt-10 h-screen w-screen">
+      <ul
+        class="menu text-base-content h-screen min-h-full w-screen gap-4 bg-[#19333A] p-4 px-6 text-xl"
+      >
+        <label
+          for="my-drawer-4"
+          aria-label="close sidebar"
+          class="drawer-overlay align-center flex w-full justify-end pb-16"
+          ><Image
+            width="24"
+            height="24"
+            src="/nav_close.svg"
+            alt="NAV"
+          /></label
+        >
+        <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+        {/* Sidebar content here */}
+        <li><a href="#WhoAreWe">About</a></li>
+        <li><a href="#Community">Statistics</a></li>
+        <li><a href="/j">Past Events</a></li>
+        <li><a href="#Sponsers">Sponsors</a></li>
+        <li><a href="#FAQ">FAQ</a></li>
+        <li>
+          <a href="#CountdownAndLinks">Links</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
