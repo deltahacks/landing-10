@@ -1,7 +1,7 @@
 module.exports = {
   ci: {
     collect: {
-      numberOfRuns: 5,
+      numberOfRuns: 50,
       settings: {
         throttling: {
           cpuSlowdownMultiplier: 2.5,
