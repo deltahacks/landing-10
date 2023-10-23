@@ -30,6 +30,7 @@ module.exports = {
         "uses-responsive-images": "warn",
         list: "off",
         listitem: "off",
+        "form-field-multiple-labels": "warn",
       },
     },
   },
