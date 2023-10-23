@@ -6,9 +6,10 @@ import Hero from "../components/Hero.astro";
 import Community from "../components/Community.astro";
 import WhoAreWe from "../components/WhoAreWe.astro";
 import Sponsors from "../components/Sponsors.astro";
+import Navbar from "../components/Navbar.astro";
 import CarouselWrapper from "../components/CarouselWrapper.astro";
 import FAQ from "../components/FAQ.astro";
-import CoundownAndLinks from "../components/CountdownAndLinks.astro";
+import CountdownAndLinks from "../components/CountdownAndLinks.astro";
 import Footer from "../components/Footer.astro";
 
 // Full Astro Component Syntax:
@@ -16,12 +17,15 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-  <Hero />
-  <WhoAreWe />
-  <Community />
-  <CarouselWrapper />
-  <Sponsors />
-  <FAQ />
-  <CoundownAndLinks />
+  <div class="fixed top-10 z-50 box-content w-full">
+    <Navbar />
+  </div>
+  <Hero id="Hero" />
+  <WhoAreWe id="WhoAreWe" />
+  <Community id="Community" />
+  <CarouselWrapper id="Carousel" />
+  <Sponsors id="Sponsers" />
+  <FAQ id="FAQ" />
+  <CountdownAndLinks id="CountdownAndLinks" />
   <Footer />
 </Layout>

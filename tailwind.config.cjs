@@ -18,5 +18,6 @@ module.exports = {
   plugins: [
     require("tailwindcss-text-fill-stroke")(),
     require("@headlessui/tailwindcss"),
+    require("daisyui"),
   ],
 };
