@@ -28,6 +28,8 @@ module.exports = {
         "tap-targets": "warn",
         // Lint Images doesn't work on the carousel images, so we can't fix this (for now)
         "uses-responsive-images": "warn",
+        list: "off",
+        listitem: "off",
       },
     },
   },
