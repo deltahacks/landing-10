@@ -1,4 +1,64 @@
-<div class="mx-auto max-w-lg pt-10">
-  <h1 class="font-display text-6xl">DeltaHacks 10</h1>
-  <p>Back and better than ever!</p>
+---
+const { id } = Astro.props;
+---
+
+<link rel="preload" as="image" href="/background_simplified.svg" />
+<link rel="preload" as="image" href="/hero_logo.svg" />
+
+<div
+  id={id}
+  class="h-screen bg-[url('/background_simplified.svg')] bg-cover bg-bottom py-8 sm:justify-normal sm:bg-cover"
+>
+  <div
+    class="absolute bottom-0 mb-24 w-full overflow-x-hidden pt-[50%] md:left-[45%] md:mb-0 md:w-[45%]"
+  >
+    <img
+      src="/hero_logo.svg"
+      class="relative bottom-0 scale-150 sm:scale-100"
+      alt=""
+      width="1000"
+      height="1000"
+    />
+  </div>
+  <div
+    class="mx-6 flex h-full max-w-6xl flex-col justify-between overflow-hidden pt-36 drop-shadow-2xl sm:justify-normal sm:gap-24 sm:pt-32 xl:mx-auto"
+  >
+    <div class="z-10">
+      <h1
+        class="text-5xl font-extrabold leading-tight tracking-tight sm:text-7xl sm:leading-normal md:text-8xl lg:text-9xl"
+      >
+        DELTA<wbr />HACKS<span class="text-rose-600">X</span>
+      </h1>
+      <!-- RGBA(231, 34, 80, 1) -->
+      <p
+        class="tagline text-xl font-semibold leading-6 tracking-tight text-cyan-900 sm:w-4/5"
+      >
+        The annual hackathon for change, taking place at McMaster University
+        from January 12 to 14, 2024.
+      </p>
+    </div>
+
+    <!-- RGBA(19, 77, 84, 1) -->
+    <div
+      class="z-10 flex w-full flex-col gap-4 text-center text-xl font-semibold sm:w-3/4 sm:flex-row lg:w-1/2"
+    >
+      <a
+        href="https://portal.deltahacks.com/"
+        class="w-full bg-white/90 py-5 text-center text-black sm:border-4 sm:border-white sm:bg-transparent sm:text-white sm:shadow-[0px_0px_35px_-15px_rgba(0,0,0,0.5)]"
+      >
+        VIEW SCHEDULE</a
+      >
+      <a
+        href="https://portal.deltahacks.com/"
+        class="w-full border-transparent bg-rose-600 py-5 text-center sm:border-4"
+      >
+        APPLY TO ATTEND</a
+      >
+    </div>
+    <!-- <img
+      src=""
+      alt=""
+      class="w[100px] absolute z-0 m-32 p-2 sm:bottom-0 sm:right-0 sm:w-96"
+    /> -->
+  </div>
 </div>

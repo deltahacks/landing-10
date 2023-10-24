@@ -2,9 +2,12 @@
 import { Image } from "astro:assets";
 import mapAsset from "../assets/map 2.svg";
 import compassAsset from "../assets/compass.svg";
+
+const { id } = Astro.props;
 ---
 
 <div
+  id={id}
   class="mx-auto flex h-fit min-h-screen max-w-6xl flex-col justify-center p-6 font-display"
 >
   <div class="z-0 mb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
