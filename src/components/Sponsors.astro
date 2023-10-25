@@ -1,7 +1,7 @@
 ---
-import { Image } from "astro:assets";
 import voiceFlowLogo from "../assets/sponsor_logos/voiceflow.png";
 import verbwireLogo from "../assets/sponsor_logos/verbwire.svg";
+import wolfram from "../assets/sponsor_logos/wolfram.png";
 import placeholder from "../assets/sponsor_logos/placeholder.png";
 
 const { id } = Astro.props;
@@ -18,7 +18,7 @@ const logoList: Array<{
 }> = [
   {
     image: {
-      class: "brightness-0 invert",
+      class: "brightness-0 invert p-6",
       src: voiceFlowLogo,
       alt: "Voiceflow",
       srcs: await getImgSrcs(voiceFlowLogo, [628, 1080]),
@@ -27,7 +27,7 @@ const logoList: Array<{
         "(min-width: 820px) 314px, (min-width: 640px) 40vw, calc(100vw - 80px)",
     },
     link: "https://www.voiceflow.com/",
-    divClass: "col-span-6",
+    divClass: "col-span-4",
   },
   {
     image: {
@@ -37,33 +37,19 @@ const logoList: Array<{
       srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
     },
     link: "https://www.verbwire.com/",
-    divClass: "col-span-6",
+    divClass: "col-span-4",
+  },
+  {
+    image: {
+      class: "brightness-0 invert",
+      src: wolfram,
+      alt: "Wolfram",
+      srcs: await getImgSrcs(wolfram, [122, 500]),
+    },
+    link: "https://www.wolframalpha.com/",
+    divClass: "col-span-4",
   },
 ];
-
-// placeholders
-for (let i = 0; i < 4; i++) {
-  logoList.push({
-    image: {
-      class: "",
-      src: placeholder,
-      alt: "Placeholder",
-      srcs: await getImgSrcs(placeholder, [placeholder.width]),
-    },
-    divClass: "col-span-3",
-  });
-}
-for (let i = 0; i < 6; i++) {
-  logoList.push({
-    image: {
-      class: "",
-      src: placeholder,
-      alt: "Placeholder",
-      srcs: await getImgSrcs(placeholder, [placeholder.width]),
-    },
-    divClass: "col-span-2",
-  });
-}
 ---
 
 <div
@@ -89,21 +75,17 @@ for (let i = 0; i < 6; i++) {
             // TODO: consider adding `classnames` package in the future if this gets more complicated
             <a
               href={logo.link ?? "javascript:;"}
-              class={logo.divClass + " h-full"}
+              class={
+                logo.divClass +
+                " flex h-full items-center justify-center bg-white bg-opacity-20 p-2 [&>*]:mx-auto"
+              }
               target={logo.link ? "_blank" : undefined}
             >
-              <div
-                class={
-                  logo.divClass +
-                  " h-full bg-white bg-opacity-20 p-2 [&>*]:mx-auto"
-                }
-              >
-                <ResponsiveImage
-                  image={{
-                    ...logo.image,
-                  }}
-                />
-              </div>
+              <ResponsiveImage
+                image={{
+                  ...logo.image,
+                }}
+              />
             </a>
           ),
       )
