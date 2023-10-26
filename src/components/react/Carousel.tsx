@@ -10,6 +10,7 @@ export const Carousel = (props: { images: ReactImageGalleryItem[] }) => {
       showFullscreenButton={false}
       autoPlay={true}
       slideInterval={5000}
+      lazyLoad={true}
     />
   );
 };
