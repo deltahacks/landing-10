@@ -77,6 +77,6 @@ const images: ReactImageGalleryItem[] = await Promise.all(
      ONE DECADE
   </h2>
   <div class="px-7">
-    <Carousel client:visible images={images} />
+    <Carousel client:only="react" images={images} />
   </div>
 </div>
