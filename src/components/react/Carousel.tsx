@@ -3,6 +3,9 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery, { type ReactImageGalleryItem } from "react-image-gallery";
 
 export const Carousel = (props: { images: ReactImageGalleryItem[] }) => {
+  if (typeof window === "undefined") {
+    return null;
+  }
   return (
     <ImageGallery
       items={props.images}
