@@ -4,28 +4,55 @@ import { Carousel } from "./react/Carousel.tsx";
 
 import { getImage } from "astro:assets";
 
-import Img1 from "../assets/carousel/1015-1000x600.jpg";
-import Img2 from "../assets/carousel/1018-1000x600.jpg";
-import Img3 from "../assets/carousel/1019-1000x600.jpg";
+import DSC01770 from "../assets/carousel/DSC01770.jpeg";
+import DSC01792 from "../assets/carousel/DSC01792.jpeg";
+import DSC01805 from "../assets/carousel/DSC01805.jpeg";
+import DSCF1862 from "../assets/carousel/DSCF1862.jpeg";
+import DSCF1873 from "../assets/carousel/DSCF1873.jpeg";
+import DSCF1890 from "../assets/carousel/DSCF1890.jpeg";
+import DSCF1901 from "../assets/carousel/DSCF1901.jpeg";
+import DSCF2187 from "../assets/carousel/DSCF2187.jpeg";
+import DSCF2207 from "../assets/carousel/DSCF2207.jpeg";
 
 const { id } = Astro.props;
 
 const images: ReactImageGalleryItem[] = await Promise.all(
   [
     {
-      image: Img1,
-      originalAlt: "Placeholder Image 1",
-      description: "Placeholder Image 1",
+      image: DSC01770,
+      originalAlt: "DSC01770",
     },
     {
-      image: Img2,
-      originalAlt: "Placeholder Image 2",
-      description: "Placeholder Image 2",
+      image: DSC01792,
+      originalAlt: "DSC01792",
     },
     {
-      image: Img3,
-      originalAlt: "Placeholder Image 3",
-      description: "Placeholder Image 3",
+      image: DSC01805,
+      originalAlt: "DSC01805",
+    },
+    {
+      image: DSCF1862,
+      originalAlt: "DSCF1862",
+    },
+    {
+      image: DSCF1873,
+      originalAlt: "DSCF1873",
+    },
+    {
+      image: DSCF1890,
+      originalAlt: "DSCF1890",
+    },
+    {
+      image: DSCF1901,
+      originalAlt: "DSCF1901",
+    },
+    {
+      image: DSCF2187,
+      originalAlt: "DSCF2187",
+    },
+    {
+      image: DSCF2207,
+      originalAlt: "DSCF2207",
     },
   ].map(async (image) => {
     const img = await getImage({ src: image.image });
