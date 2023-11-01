@@ -2,7 +2,7 @@
 import voiceFlowLogo from "../assets/sponsor_logos/voiceflow.png";
 import verbwireLogo from "../assets/sponsor_logos/verbwire.svg";
 import wolfram from "../assets/sponsor_logos/wolfram.png";
-import placeholder from "../assets/sponsor_logos/placeholder.png";
+import stickeryou from "../assets/sponsor_logos/stickeryou.png";
 
 const { id } = Astro.props;
 
@@ -27,7 +27,7 @@ const logoList: Array<{
         "(min-width: 820px) 314px, (min-width: 640px) 40vw, calc(100vw - 80px)",
     },
     link: "https://www.voiceflow.com/",
-    divClass: "col-span-6 md:col-span-4",
+    divClass: "col-span-6 md:col-span-3",
   },
   {
     image: {
@@ -37,7 +37,7 @@ const logoList: Array<{
       srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
     },
     link: "https://www.verbwire.com/",
-    divClass: "col-span-6 md:col-span-4",
+    divClass: "col-span-6 md:col-span-3",
   },
   {
     image: {
@@ -46,8 +46,18 @@ const logoList: Array<{
       alt: "Wolfram",
       srcs: await getImgSrcs(wolfram, [122, 500]),
     },
-    link: "https://www.wolframalpha.com/",
-    divClass: "col-span-6 md:col-span-4",
+    link: "https://www.wolfram.com",
+    divClass: "col-span-6 md:col-span-3",
+  },
+  {
+    image: {
+      class: "brightness-0 invert",
+      src: stickeryou,
+      alt: "Wolfram",
+      srcs: await getImgSrcs(stickeryou, [122, 500]),
+    },
+    link: "https://www.stickeryou.com/en-ca",
+    divClass: "col-span-6 md:col-span-3",
   },
 ];
 ---
