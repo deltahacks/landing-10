@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 ---
 
 <div
-  class="flex max-w-6xl items-center justify-between bg-[#19333A] bg-opacity-40 px-6 py-5 backdrop-blur-xl md:px-8 xl:mx-auto overscroll-none"
+  class="flex max-w-6xl items-center justify-between bg-[#19333A] bg-opacity-40 px-6 py-5 backdrop-blur-xl md:px-8 xl:mx-auto"
 >
   <a href="#Hero" class="">
     <Image width="24" height="24" class="h-6" src="/nav_logo.svg" alt="logo" />
@@ -61,7 +61,7 @@ import { Image } from "astro:assets";
           /></label
         >
       </div>
-      <div class="drawer-side h-screen w-screen">
+      <div class="drawer-side h-max w-screen overscroll-none">
         <ul
           class="menu h-screen min-h-full w-screen gap-4 bg-[#19333A] p-4 px-6 text-xl text-base-content"
         >
