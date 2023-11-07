@@ -16,16 +16,23 @@ import Footer from "../components/Footer.astro";
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
+<link as="image" href="/dotted_line_bg_ver1.svg" />
+<link as="image" href="/dotted_line_bg_ver2.svg" />
+
 <Layout>
   <div class="fixed z-50 box-content w-full sm:top-10">
     <Navbar />
   </div>
   <Hero id="Hero" />
-  <WhoAreWe id="WhoAreWe" />
-  <Community id="Community" />
-  <CarouselWrapper id="Carousel" />
-  <Sponsors id="Sponsers" />
-  <FAQ id="FAQ" />
-  <CountdownAndLinks id="CountdownAndLinks" />
+  <div
+    class="bg-[url('/dotted_line_bg_ver2.svg')] bg-[length:auto_98%] bg-[70%_10px] bg-no-repeat md:bg-[url('/dotted_line_bg_ver1.svg')] md:bg-cover md:bg-top"
+  >
+    <WhoAreWe id="WhoAreWe" />
+    <Community id="Community" />
+    <CarouselWrapper id="Carousel" />
+    <Sponsors id="Sponsors" />
+    <FAQ id="FAQ" />
+    <CountdownAndLinks id="CountdownAndLinks" />
+  </div>
   <Footer />
 </Layout>
