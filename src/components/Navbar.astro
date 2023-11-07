@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 ---
 
 <div
-  class="mx-6 flex max-w-6xl items-center justify-between bg-[#19333A] bg-opacity-40 px-6 py-5 backdrop-blur-xl md:px-8 xl:mx-auto"
+  class="flex max-w-6xl items-center justify-between bg-[#19333A] bg-opacity-40 px-6 py-5 backdrop-blur-xl md:px-8 xl:mx-auto"
 >
   <a href="#Hero" class="">
     <Image width="24" height="24" class="h-6" src="/nav_logo.svg" alt="logo" />
@@ -47,57 +47,92 @@ import { Image } from "astro:assets";
       /></a
     >
   </div>
-  <div class="md:hidden">
-    <div class="drawer drawer-end">
-      <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content">
-        {/* Page content here */}
-        <label for="my-drawer-4" class="drawer-button"
-          ><Image
-            width="24"
-            height="24"
-            src="/nav_sizing.svg"
-            alt="NAV"
-          /></label
-        >
-      </div>
-      <div class="drawer-side h-screen w-screen opacity-90">
-        <ul
-          class="menu h-screen min-h-full w-screen gap-4 bg-[#19333A] p-4 px-6 text-xl text-base-content"
-        >
-          <label
-            for="my-drawer-4"
-            aria-label="close sidebar"
-            class="align-center drawer-overlay flex w-full justify-end pb-16"
+  <div class="">
+    <div class="inset-0 md:hidden">
+      <div class="drawer drawer-end">
+        <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+          {/* Page content here */}
+          <label for="my-drawer-4" class="drawer-button"
             ><Image
               width="24"
               height="24"
-              src="/nav_close.svg"
+              src="/nav_sizing.svg"
               alt="NAV"
             /></label
           >
-          <!-- <input id="my-drawer-4" type="checkbox" class="drawer-toggle" /> -->
-          <div class="text-white">
-            <li>
-              <a href="#" onclick="hideSidebar()">Home</a>
-            </li>
-            <li>
-              <a href="#WhoAreWe" onclick="hideSidebar()">About</a>
-            </li>
-            <li>
-              <a href="#Community" onclick="hideSidebar()">Statistics</a>
-            </li>
-            <li>
-              <a href="#Carousel" onclick="hideSidebar();">Past Events</a>
-            </li>
-            <li>
-              <a href="#Sponsors" onclick="hideSidebar()">Sponsors</a>
-            </li>
-            <li>
-              <a href="#FAQ" onclick="hideSidebar()">FAQ</a>
-            </li>
-          </div>
-        </ul>
+        </div>
+        <div class="drawer-side h-[calc(100dvh)] w-screen overscroll-none">
+          <ul
+            class="menu h-[calc(100dvh)] min-h-full w-screen gap-4 bg-[#19333A] p-4 px-6 text-xl text-base-content"
+          >
+            <label
+              for="my-drawer-4"
+              aria-label="close sidebar"
+              class="align-center drawer-overlay flex w-full justify-end pb-16"
+              ><Image
+                width="24"
+                height="24"
+                src="/nav_close.svg"
+                alt="NAV"
+              /></label
+            >
+            <!-- <input id="my-drawer-4" type="checkbox" class="drawer-toggle" /> -->
+            <div class="flex flex-col justify-between">
+              <div class="text-white">
+                <li>
+                  <a href="#" onclick="hideSidebar()">Home</a>
+                </li>
+                <li>
+                  <a href="#WhoAreWe" onclick="hideSidebar()">About</a>
+                </li>
+                <li>
+                  <a href="#Community" onclick="hideSidebar()">Statistics</a>
+                </li>
+                <li>
+                  <a href="#Carousel" onclick="hideSidebar();">Past Events</a>
+                </li>
+                <li>
+                  <a href="#Sponsers" onclick="hideSidebar()">Sponsors</a>
+                </li>
+                <li>
+                  <a href="#FAQ" onclick="hideSidebar()">FAQ</a>
+                </li>
+              </div>
+              <div
+                class="align-center flex w-full items-center justify-center gap-4 pt-24 md:gap-4"
+              >
+                <a href="https://www.linkedin.com/company/deltahacks/mycompany/"
+                  ><Image
+                    class=""
+                    width="72"
+                    height="72"
+                    src="/nav_linkedin.svg"
+                    alt="logo"
+                  /></a
+                >
+                <a href="https://www.instagram.com/deltahacks">
+                  <Image
+                    class=""
+                    width="72"
+                    height="72"
+                    src="/nav_insta.svg"
+                    alt="Instagram"
+                  /></a
+                >
+                <a href="https://twitter.com/deltaHacks"
+                  ><Image
+                    class=""
+                    width="72"
+                    height="72"
+                    src="/nav_twitter.svg"
+                    alt="Twitter"
+                  /></a
+                >
+              </div>
+            </div>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
