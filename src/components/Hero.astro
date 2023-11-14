@@ -3,14 +3,15 @@ const { id } = Astro.props;
 ---
 
 <link rel="preload" as="image" href="/background_simplified.svg" />
+<link rel="preload" as="image" href="/background_simplified_mobile.svg" />
 <link rel="preload" as="image" href="/hero_logo.svg" />
 
 <div
   id={id}
-  class="h-screen bg-[url('/background_simplified.svg')] bg-cover bg-bottom py-8 sm:justify-normal sm:bg-cover"
+  class="h-screen bg-[url('/background_simplified_mobile.svg')] bg-cover bg-bottom py-8 sm:justify-normal sm:bg-[url('/background_simplified.svg')] sm:bg-cover"
 >
   <div
-    class="absolute bottom-0 mb-24 w-full overflow-x-hidden pt-[50%] md:left-[45%] md:mb-0 md:w-[45%]"
+    class="absolute bottom-0 mb-24 w-full overflow-x-hidden pt-[50%] sm:left-[45%] sm:mb-0 sm:w-[45%]"
   >
     <img
       src="/hero_logo.svg"
