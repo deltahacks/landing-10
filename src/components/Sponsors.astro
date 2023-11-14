@@ -27,7 +27,7 @@ const logoList: Array<{
         "(min-width: 820px) 314px, (min-width: 640px) 40vw, calc(100vw - 80px)",
     },
     link: "https://www.voiceflow.com/",
-    divClass: "col-span-6 md:col-span-3",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
   },
   {
     image: {
@@ -37,7 +37,7 @@ const logoList: Array<{
       srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
     },
     link: "https://www.verbwire.com/",
-    divClass: "col-span-6 md:col-span-3",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
   },
   {
     image: {
@@ -47,17 +47,17 @@ const logoList: Array<{
       srcs: await getImgSrcs(wolfram, [122, 500]),
     },
     link: "https://www.wolfram.com",
-    divClass: "col-span-6 md:col-span-3",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
   },
   {
     image: {
-      class: "brightness-0 invert",
+      class: "brightness-0 invert max-h-24",
       src: stickeryou,
       alt: "stickeryou",
       srcs: await getImgSrcs(stickeryou, [122, 500]),
     },
     link: "https://www.stickeryou.com/en-ca",
-    divClass: "col-span-6 md:col-span-3",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
   },
 ];
 ---
@@ -76,7 +76,7 @@ const logoList: Array<{
   </h2>
 
   <!-- Grid container -->
-  <div class="grid grid-cols-6 gap-5 md:grid-cols-12">
+  <div class="grid grid-cols-4 gap-5">
     {
       logoList.map(
         (logo) =>
@@ -100,5 +100,10 @@ const logoList: Array<{
           ),
       )
     }
+  </div>
+  <div
+    class="flex w-full items-center justify-center p-4 text-lg text-base-content"
+  >
+    and more!
   </div>
 </div>
