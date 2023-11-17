@@ -56,7 +56,7 @@ const logoList: Array<{
   },
   {
     image: {
-      class: "brightness-0 invert  p-5",
+      class: "brightness-0 invert object-contain max-h-32 p-2",
       src: stickeryou,
       alt: "stickeryou",
       srcs: await getImgSrcs(stickeryou, [122, 500]),
@@ -68,10 +68,10 @@ const logoList: Array<{
   },
   {
     image: {
-      class: "brightness-0 invert p-6",
+      class: "brightness-0 invert object-contain max-h-32",
       src: mes,
       alt: "McMaster Engineering Society",
-      srcs: await getImgSrcs(mes, [628, 1080]),
+      srcs: await getImgSrcs(mes, [864, 486]),
       sizes:
         "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
@@ -80,10 +80,10 @@ const logoList: Array<{
   },
   {
     image: {
-      class: "brightness-0 invert p-6",
+      class: "brightness-0 invert object-contain max-h-32 p-2",
       src: mcMaster,
       alt: "McMaster University",
-      srcs: await getImgSrcs(mcMaster, [628, 1080]),
+      srcs: await getImgSrcs(mcMaster, [3262, 1810]),
       sizes:
         "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
@@ -118,7 +118,7 @@ const logoList: Array<{
               href={logo.link ?? "javascript:;"}
               class={
                 logo.divClass +
-                " flex items-center justify-center bg-white bg-opacity-20 p-2 [&>*]:mx-auto"
+                " flex max-h-32 items-center justify-center bg-white bg-opacity-20 object-scale-down p-2 [&>*]:mx-auto"
               }
               target={logo.link ? "_blank" : undefined}
             >
