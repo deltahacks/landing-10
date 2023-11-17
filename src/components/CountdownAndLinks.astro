@@ -7,7 +7,7 @@ const { id } = Astro.props;
 // ----- countdown -----
 import dayjs from "dayjs";
 import { Counter } from "./Counter";
-const end = dayjs(new Date("2023-11-18 00:00:00"));
+const end = dayjs(new Date("2023-10-20 23:59:59")); // temporary deadline for testing
 
 // ----- links -----
 const links: Array<{
@@ -44,7 +44,16 @@ const links: Array<{
   <div
     class="grid grid-cols-1 lg:-mb-24 lg:grid-cols-3 lg:grid-rows-2 lg:gap-y-6"
   >
-    <Counter client:only="react" endTime={end.unix()} />
+    <!-- <Counter client:only="react" endTime={end.unix()} /> -->
+
+    <div class="text-center font-bold md:col-span-2 lg:text-left">
+      <h1
+        class="text-2xl text-fill-transparent text-stroke-white text-stroke-2 md:whitespace-nowrap md:text-6xl"
+      >
+        <span> APPLICATIONS</span>
+      </h1>
+      <p class="text-5xl md:text-7xl">OPEN SOON!</p>
+    </div>
 
     <div class="mx-auto p-10 md:row-span-2 md:px-5 lg:py-0">
       <Image src={chestAsset} alt="Treasure Chest" class="w-64 lg:w-[360px]" />
