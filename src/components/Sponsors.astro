@@ -3,6 +3,9 @@ import voiceFlowLogo from "../assets/sponsor_logos/voiceflow.svg";
 import verbwireLogo from "../assets/sponsor_logos/verbwire.svg";
 import wolfram from "../assets/sponsor_logos/wolfram.svg";
 import stickeryou from "../assets/sponsor_logos/stickeryou.svg";
+import mes from "../assets/sponsor_logos/mes.png";
+import mcMaster from "../assets/sponsor_logos/mcmaster.png";
+import fdm from "../assets/sponsor_logos/fdm.svg";
 
 const { id } = Astro.props;
 
@@ -18,16 +21,27 @@ const logoList: Array<{
 }> = [
   {
     image: {
+      class: "brightness-0 invert object-contain max-h-32 scale-110",
+      src: fdm,
+      alt: "FDM",
+      srcs: await getImgSrcs(fdm, [626, 467.4]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://www.fdmgroup.com/",
+    divClass: "col-span-4 md:col-span-3",
+  },
+  {
+    image: {
       class: "brightness-0 invert p-6",
       src: voiceFlowLogo,
       alt: "Voiceflow",
       srcs: await getImgSrcs(voiceFlowLogo, [628, 1080]),
-
       sizes:
-        "(min-width: 820px) 314px, (min-width: 640px) 40vw, calc(100vw - 80px)",
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.voiceflow.com/",
-    divClass: "col-span-6 md:col-span-3",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
   },
   {
     image: {
@@ -35,9 +49,11 @@ const logoList: Array<{
       src: verbwireLogo,
       alt: "Verbwire",
       srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
+      sizes:
+        "(min-width: 1260px) 229px, (min-width: 1040px) calc(14vw + 55px), (min-width: 780px) 133px, (min-width: 640px) calc(50vw - 66px), calc(100vw - 80px)",
     },
     link: "https://www.verbwire.com/",
-    divClass: "col-span-6 md:col-span-3",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
   },
   {
     image: {
@@ -45,19 +61,47 @@ const logoList: Array<{
       src: wolfram,
       alt: "Wolfram",
       srcs: await getImgSrcs(wolfram, [122, 500]),
+      sizes:
+        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), (min-width: 600px) 500px, calc(94.29vw - 47px)",
     },
     link: "https://www.wolfram.com",
-    divClass: "col-span-6 md:col-span-3",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
   },
   {
     image: {
-      class: "brightness-0 invert",
+      class: "brightness-0 invert object-contain max-h-32 p-2",
       src: stickeryou,
       alt: "stickeryou",
       srcs: await getImgSrcs(stickeryou, [122, 500]),
+      sizes:
+        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)",
     },
     link: "https://www.stickeryou.com/en-ca",
-    divClass: "col-span-6 md:col-span-3",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
+  },
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32",
+      src: mes,
+      alt: "McMaster Engineering Society",
+      srcs: await getImgSrcs(mes, [864, 486]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://www.macengsociety.ca/",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
+  },
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32 p-2",
+      src: mcMaster,
+      alt: "McMaster University",
+      srcs: await getImgSrcs(mcMaster, [3262, 1810]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://www.mcmaster.ca/",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
   },
 ];
 ---
@@ -76,7 +120,7 @@ const logoList: Array<{
   </h2>
 
   <!-- Grid container -->
-  <div class="grid grid-cols-6 gap-5 md:grid-cols-12">
+  <div class="grid grid-cols-4 gap-5 md:grid-cols-3">
     {
       logoList.map(
         (logo) =>
@@ -87,7 +131,7 @@ const logoList: Array<{
               href={logo.link ?? "javascript:;"}
               class={
                 logo.divClass +
-                " flex items-center justify-center bg-white bg-opacity-20 p-2 [&>*]:mx-auto"
+                " flex max-h-32 items-center justify-center bg-white bg-opacity-20 object-scale-down p-2 [&>*]:mx-auto"
               }
               target={logo.link ? "_blank" : undefined}
             >
@@ -100,5 +144,8 @@ const logoList: Array<{
           ),
       )
     }
+  </div>
+  <div class="flex w-full items-center justify-center p-4 text-lg text-white">
+    and more!
   </div>
 </div>
