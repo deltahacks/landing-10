@@ -3,6 +3,8 @@ import voiceFlowLogo from "../assets/sponsor_logos/voiceflow.svg";
 import verbwireLogo from "../assets/sponsor_logos/verbwire.svg";
 import wolfram from "../assets/sponsor_logos/wolfram.svg";
 import stickeryou from "../assets/sponsor_logos/stickeryou.svg";
+import mes from "../assets/sponsor_logos/mes.png";
+import mcMaster from "../assets/sponsor_logos/mcmaster.png";
 
 const { id } = Astro.props;
 
@@ -54,14 +56,38 @@ const logoList: Array<{
   },
   {
     image: {
-      class: "brightness-0 invert max-h-24",
+      class: "brightness-0 invert  p-5",
       src: stickeryou,
       alt: "stickeryou",
       srcs: await getImgSrcs(stickeryou, [122, 500]),
       sizes:
-        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)"
+        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)",
     },
     link: "https://www.stickeryou.com/en-ca",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
+  },
+  {
+    image: {
+      class: "brightness-0 invert p-6",
+      src: mes,
+      alt: "McMaster Engineering Society",
+      srcs: await getImgSrcs(mes, [628, 1080]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://www.macengsociety.ca/",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
+  },
+  {
+    image: {
+      class: "brightness-0 invert p-6",
+      src: mcMaster,
+      alt: "McMaster University",
+      srcs: await getImgSrcs(mcMaster, [628, 1080]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://www.mcmaster.ca/",
     divClass: "col-span-4 sm:col-span-2 md:col-span-1",
   },
 ];
@@ -81,7 +107,7 @@ const logoList: Array<{
   </h2>
 
   <!-- Grid container -->
-  <div class="grid grid-cols-4 gap-5">
+  <div class="grid grid-cols-4 gap-5 md:grid-cols-3">
     {
       logoList.map(
         (logo) =>
@@ -106,9 +132,7 @@ const logoList: Array<{
       )
     }
   </div>
-  <div
-    class="flex w-full items-center justify-center p-4 text-lg text-base-content"
-  >
+  <div class="flex w-full items-center justify-center p-4 text-lg text-white">
     and more!
   </div>
 </div>
