@@ -6,6 +6,7 @@ import stickeryou from "../assets/sponsor_logos/stickeryou.svg";
 import mes from "../assets/sponsor_logos/mes.png";
 import mcMaster from "../assets/sponsor_logos/mcmaster.png";
 import fdm from "../assets/sponsor_logos/fdm.svg";
+import bell from "../assets/sponsor_logos/bell.svg";
 
 const { id } = Astro.props;
 
@@ -101,6 +102,18 @@ const logoList: Array<{
         "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.mcmaster.ca/",
+    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
+  },
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32 p-2",
+      src: bell,
+      alt: "Bell Canada",
+      srcs: await getImgSrcs(bell, [bell.width]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://www.bell.ca/",
     divClass: "col-span-4 sm:col-span-2 md:col-span-1",
   },
 ];
