@@ -25,21 +25,42 @@ export const Counter: React.FC<CounterProps> = ({ endTime }) => {
     } else {
       const twoDP = (n: number) => (n > 9 ? n : "0" + n);
 
-      var duration = dayjs.duration(t * 1000, "milliseconds");
+      let duration = dayjs.duration(t * 1000, "milliseconds");
 
       duration = dayjs.duration(duration.asMilliseconds(), "milliseconds");
-      let timestamp = `${twoDP(
+      const timestamp_lastday = `${twoDP(
         duration.days() * 24 + duration.hours(),
       )}:${twoDP(duration.minutes())}:${twoDP(duration.seconds())}`;
+      const timestamp_rest = `${twoDP(duration.days())} DAYS`;
+      const timestamp = duration.days() > 1 ? timestamp_rest : timestamp_lastday
 
       return (
-        <div className="text-center font-bold md:col-span-2 lg:text-left">
-          <h1 className="text-2xl text-fill-transparent text-stroke-white text-stroke-2 md:whitespace-nowrap md:text-6xl">
-            <span> APPLICATIONS</span>
-            <span className="whitespace-nowrap"> OPEN IN</span>
+        <div>
+          { duration.asSeconds() === 0 ?
+          <div className="text-center font-bold md:col-span-2 lg:text-left">
+          <h1
+            className="text-2xl text-fill-transparent text-stroke-white text-stroke-2 md:whitespace-nowrap md:text-6xl"
+          >
+            <span> APPLICATIONS ARE</span>
           </h1>
-          <p className="text-7xl md:text-9xl">{timestamp}</p>
+          <a
+            className="text-5xl underline md:text-7xl"
+            href="https://portal.deltahacks.com/"
+            >CLOSED! ↗
+          </a>
         </div>
+          :
+        <div className="text-center font-bold md:col-span-2 lg:text-left">
+        <h1 className="text-2xl text-fill-transparent text-stroke-white text-stroke-2 md:whitespace-nowrap md:text-6xl">
+          <span> APPLICATIONS</span>
+          <span className="whitespace-nowrap"> CLOSE IN</span>
+        </h1>
+        <p className="text-7xl md:text-9xl">{timestamp}</p>
+      </div>
+        
+        }
+        </div>
+        
       );
     }
   };
