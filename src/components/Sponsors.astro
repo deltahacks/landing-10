@@ -1,12 +1,20 @@
 ---
+//Tier 1
+import mes from "../assets/sponsor_logos/mes.png";
+import mcMaster from "../assets/sponsor_logos/mcmaster.png";
+
+//Tier 2
+import fdm from "../assets/sponsor_logos/fdm.svg";
+import bell from "../assets/sponsor_logos/bell.svg";
+import scotiabank from "../assets/sponsor_logos/scotiabank.png";
+import cse from "../assets/sponsor_logos/cse.png";
+import onezo from "../assets/sponsor_logos/onezo.png";
+
+//Tier 3
 import voiceFlowLogo from "../assets/sponsor_logos/voiceflow.svg";
 import verbwireLogo from "../assets/sponsor_logos/verbwire.svg";
 import wolfram from "../assets/sponsor_logos/wolfram.svg";
 import stickeryou from "../assets/sponsor_logos/stickeryou.svg";
-import mes from "../assets/sponsor_logos/mes.png";
-import mcMaster from "../assets/sponsor_logos/mcmaster.png";
-import fdm from "../assets/sponsor_logos/fdm.svg";
-import bell from "../assets/sponsor_logos/bell.svg";
 
 const { id } = Astro.props;
 
@@ -20,6 +28,57 @@ const logoList: Array<{
   divClass: string;
   link?: string;
 }> = [
+  //TIER 1
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32",
+      src: mes,
+      alt: "McMaster Engineering Society",
+      srcs: await getImgSrcs(mes, [864, 486]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://www.macengsociety.ca/",
+    divClass: "col-span-12 md:col-span-6",
+  },
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32 p-4",
+      src: mcMaster,
+      alt: "McMaster University",
+      srcs: await getImgSrcs(mcMaster, [mcMaster.width]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://www.mcmaster.ca/",
+    divClass: "col-span-12 md:col-span-6",
+  },
+  //TIER 2
+
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32 p-2",
+      src: bell,
+      alt: "Bell Canada",
+      srcs: await getImgSrcs(bell, [bell.width]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://www.bell.ca/",
+    divClass: "col-span-6",
+  },
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32 p-2",
+      src: scotiabank,
+      alt: "Scotiabank",
+      srcs: await getImgSrcs(scotiabank, [scotiabank.width]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://www.scotiabank.com/ca/en/personal.html",
+    divClass: "col-span-6",
+  },
   {
     image: {
       class: "brightness-0 invert object-contain max-h-32 scale-110",
@@ -30,35 +89,36 @@ const logoList: Array<{
         "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.fdmgroup.com/",
-    divClass: "col-span-4 md:col-span-3",
+    divClass: "col-span-6 sm:col-span-4",
   },
   {
     image: {
-      class: "brightness-0 invert p-6",
-      src: voiceFlowLogo,
-      alt: "Voiceflow",
-      srcs: await getImgSrcs(voiceFlowLogo, [628, 1080]),
+      class: "brightness-0 invert object-contain max-h-32 scale-125",
+      src: cse,
+      alt: "CSE",
+      srcs: await getImgSrcs(cse, [cse.width]),
       sizes:
         "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
-    link: "https://www.voiceflow.com/",
-    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
+    link: "https://www.cse-cst.gc.ca/en",
+    divClass: "col-span-6 sm:col-span-4",
   },
   {
     image: {
-      class: "p-2",
-      src: verbwireLogo,
-      alt: "Verbwire",
-      srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
+      class: "brightness-0 invert object-contain max-h-32 p-2",
+      src: onezo,
+      alt: "Onezo",
+      srcs: await getImgSrcs(onezo, [onezo.width]),
       sizes:
-        "(min-width: 1260px) 229px, (min-width: 1040px) calc(14vw + 55px), (min-width: 780px) 133px, (min-width: 640px) calc(50vw - 66px), calc(100vw - 80px)",
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
-    link: "https://www.verbwire.com/",
-    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
+    link: "https://www.onezotea.com/en",
+    divClass: "col-span-6 sm:col-span-4",
   },
+  //TIER 3
   {
     image: {
-      class: "brightness-0 invert",
+      class: "brightness-0 invert object-contain max-h-32",
       src: wolfram,
       alt: "Wolfram",
       srcs: await getImgSrcs(wolfram, [122, 500]),
@@ -66,7 +126,20 @@ const logoList: Array<{
         "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), (min-width: 600px) 500px, calc(94.29vw - 47px)",
     },
     link: "https://www.wolfram.com",
-    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
+    divClass: "col-span-6 sm:col-span-3",
+  },
+
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32",
+      src: verbwireLogo,
+      alt: "Verbwire",
+      srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
+      sizes:
+        "(min-width: 1260px) 229px, (min-width: 1040px) calc(14vw + 55px), (min-width: 780px) 133px, (min-width: 640px) calc(50vw - 66px), calc(100vw - 80px)",
+    },
+    link: "https://www.verbwire.com/",
+    divClass: "col-span-4 sm:col-span-3",
   },
   {
     image: {
@@ -78,43 +151,19 @@ const logoList: Array<{
         "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)",
     },
     link: "https://www.stickeryou.com/en-ca",
-    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
+    divClass: "col-span-4 sm:col-span-3",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32",
-      src: mes,
-      alt: "McMaster Engineering Society",
-      srcs: await getImgSrcs(mes, [864, 486]),
+      class: "brightness-0 invert object-contain max-h-32 p-1",
+      src: voiceFlowLogo,
+      alt: "Voiceflow",
+      srcs: await getImgSrcs(voiceFlowLogo, [628, 1080]),
       sizes:
         "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
-    link: "https://www.macengsociety.ca/",
-    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
-  },
-  {
-    image: {
-      class: "brightness-0 invert object-contain max-h-32 p-2",
-      src: mcMaster,
-      alt: "McMaster University",
-      srcs: await getImgSrcs(mcMaster, [3262, 1810]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
-    },
-    link: "https://www.mcmaster.ca/",
-    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
-  },
-  {
-    image: {
-      class: "brightness-0 invert object-contain max-h-32 p-2",
-      src: bell,
-      alt: "Bell Canada",
-      srcs: await getImgSrcs(bell, [bell.width]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
-    },
-    link: "https://www.bell.ca/",
-    divClass: "col-span-4 sm:col-span-2 md:col-span-1",
+    link: "https://www.voiceflow.com/",
+    divClass: "col-span-4 sm:col-span-3",
   },
 ];
 ---
@@ -133,7 +182,7 @@ const logoList: Array<{
   </h2>
 
   <!-- Grid container -->
-  <div class="grid grid-cols-4 gap-5 md:grid-cols-3">
+  <div class="grid grid-cols-12 gap-5">
     {
       logoList.map(
         (logo) =>
