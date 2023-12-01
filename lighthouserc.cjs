@@ -31,6 +31,7 @@ module.exports = {
         list: "off",
         listitem: "off",
         "form-field-multiple-labels": "warn",
+        "unsized-images": "warn",
       },
     },
   },
