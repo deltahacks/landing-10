@@ -11,7 +11,9 @@ const { id } = Astro.props;
   id={id}
   class="h-screen bg-[url('/background_simplified_mobile.svg')] bg-cover bg-bottom py-8 sm:justify-normal sm:bg-[url('/background_simplified.svg')] sm:bg-cover"
 >
-  <div class="absolute right-0 pr-2 pt-8 sm:pr-10 sm:pt-16 md:pr-4 md:pt-20">
+  <div
+    class="absolute right-0 pr-2 pt-8 sm:pr-10 sm:pt-16 md:pr-4 md:pt-16 lg:hidden"
+  >
     <MLH />
   </div>
   <div
