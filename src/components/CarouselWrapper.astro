@@ -7,52 +7,61 @@ import { getImage } from "astro:assets";
 import DSC01770 from "../assets/carousel/DSC01770.jpeg";
 import DSC01792 from "../assets/carousel/DSC01792.jpeg";
 import DSC01805 from "../assets/carousel/DSC01805.jpeg";
+import DSC02061 from "../assets/carousel/DSC02061.jpeg";
 import DSCF1862 from "../assets/carousel/DSCF1862.jpeg";
 import DSCF1873 from "../assets/carousel/DSCF1873.jpeg";
-import DSCF1890 from "../assets/carousel/DSCF1890.jpeg";
-import DSCF1901 from "../assets/carousel/DSCF1901.jpeg";
 import DSCF2187 from "../assets/carousel/DSCF2187.jpeg";
-import DSCF2207 from "../assets/carousel/DSCF2207.jpeg";
 
 const { id } = Astro.props;
 
 const images: ReactImageGalleryItem[] = await Promise.all(
   [
     {
-      image: DSC01770,
-      originalAlt: "DSC01770",
-    },
-    {
-      image: DSC01792,
-      originalAlt: "DSC01792",
-    },
-    {
-      image: DSC01805,
-      originalAlt: "DSC01805",
-    },
-    {
-      image: DSCF1862,
-      originalAlt: "DSCF1862",
-    },
-    {
       image: DSCF1873,
-      originalAlt: "DSCF1873",
+      originalAlt:
+        "A wide-angle view of a packed lecture hall with rows of students seated at desks, some with raised hands, engaging with a presenter speaking at the front.",
+      description:
+        "With over 500 attendees last year, DeltaHacks 10 is shaping up to be the biggest one yet!",
     },
     {
-      image: DSCF1890,
-      originalAlt: "DSCF1890",
-    },
-    {
-      image: DSCF1901,
-      originalAlt: "DSCF1901",
+      image: DSC01770,
+      originalAlt:
+        'A classroom setting with students focused on their laptops. The foreground shows a young man wearing a grey sweatshirt with the word "Champion" emblazoned on it, engaged in his work.',
+      description:
+        "Hackathons are not easy, and you need to stay focused, and determined to make it to the end of this multi day event!",
     },
     {
       image: DSCF2187,
-      originalAlt: "DSCF2187",
+      originalAlt:
+        "Students gathered around tables, discussing and working on laptops. The scene shows an interactive and collaborative environment with a focus on learning and teamwork.",
+      description:
+        "Teams are encouraged to collaborate and brainstorm, and they're actively engaged in problem-solving and coding solutions!",
     },
     {
-      image: DSCF2207,
-      originalAlt: "DSCF2207",
+      image: DSCF1862,
+      originalAlt:
+        "A lecture hall with a large screen displaying colorful graphics of swag items like beanies, T-shirts, stickers, and lanyards. In the foreground, two presenters are focused on their task with an attentive audience.",
+      description:
+        "There will be no shortage of free swag, including shirts, tote bags, lanyards, and more!",
+    },
+    {
+      image: DSC02061,
+      originalAlt:
+        "Group of four diverse individuals standing in front of a presentation screen, smiling and holding boxes of Sony Over-Ear Noise Cancelling Bluetooth Headphones. A text on the screen mentions the headphones and a $125 discount for team members.",
+      description: "Not to mention, there are a ton of prizes to be won!",
+    },
+    {
+      image: DSC01805,
+      originalAlt:
+        "Three young men smiling at the camera, standing in front of a lecture hall with a stack of red cups balanced between them. They wear casual clothing and lanyards with identification badges.",
+      description:
+        "Participants share a moment of camaraderie with a tower of stacked cups - there are tons of light-hearted challenges woven into the event's agenda!",
+    },
+    {
+      image: DSC01792,
+      originalAlt:
+        "A large group of young adults wearing matching black shirts with a rainbow triangle logo, posing with smiles in a tiered lecture hall. Some hold boxes and takeaway food containers, signaling a group event or celebration.",
+      description: "Meet some of the DeltaHacks team!",
     },
   ].map(async (image) => {
     const img = await getImage({ src: image.image });
