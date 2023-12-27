@@ -64,8 +64,7 @@ const images: ReactImageGalleryItem[] = await Promise.all(
       description: "Meet some of the DeltaHacks team!",
     },
   ].map(async (image) => {
-    const img = await getImage({ src: image.image });
-
+    const img = await getImage({ src: image.image, width: 1600, height: 900 });
     return {
       ...image,
       original: img.src,
