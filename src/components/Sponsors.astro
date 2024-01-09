@@ -17,6 +17,7 @@ import verbwireLogo from "../assets/sponsor_logos/verbwire.svg";
 import wolfram from "../assets/sponsor_logos/wolfram.svg";
 import stickeryou from "../assets/sponsor_logos/stickeryou.svg";
 import cohere from "../assets/sponsor_logos/cohere.svg";
+import echo3d from "../assets/sponsor_logos/echo3d.png";
 
 const { id } = Astro.props;
 
@@ -180,7 +181,7 @@ const logoList: Array<{
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-4",
+      class: "brightness-0 invert object-contain max-h-32 p-3",
       src: cohere,
       alt: "Cohere",
       srcs: await getImgSrcs(cohere, [cohere.width]),
@@ -188,6 +189,18 @@ const logoList: Array<{
         "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://cohere.com/",
+    divClass: "col-span-4 sm:col-span-3",
+  },
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32 p-2",
+      src: echo3d,
+      alt: "Echo3D",
+      srcs: await getImgSrcs(echo3d, [echo3d.width]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://www.echo3d.com/",
     divClass: "col-span-4 sm:col-span-3",
   },
 ];
