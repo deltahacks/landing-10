@@ -56,7 +56,18 @@ const logoList: Array<{
     divClass: "col-span-12 md:col-span-6",
   },
   //TIER 2
-
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32 p-1",
+      src: cohere,
+      alt: "Cohere",
+      srcs: await getImgSrcs(cohere, [cohere.width]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://cohere.com/",
+    divClass: "col-span-6",
+  },
   {
     image: {
       class: "brightness-0 invert object-contain max-h-32 p-2",
@@ -91,7 +102,7 @@ const logoList: Array<{
         "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.fdmgroup.com/",
-    divClass: "col-span-6 sm:col-span-4",
+    divClass: "col-span-6",
   },
   {
     image: {
@@ -128,7 +139,7 @@ const logoList: Array<{
         "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), (min-width: 600px) 500px, calc(94.29vw - 47px)",
     },
     link: "https://www.wolfram.com",
-    divClass: "col-span-6 sm:col-span-3",
+    divClass: "col-span-6 sm:col-span-4",
   },
 
   {
@@ -141,7 +152,7 @@ const logoList: Array<{
         "(min-width: 1260px) 229px, (min-width: 1040px) calc(14vw + 55px), (min-width: 780px) 133px, (min-width: 640px) calc(50vw - 66px), calc(100vw - 80px)",
     },
     link: "https://www.verbwire.com/",
-    divClass: "col-span-4 sm:col-span-3",
+    divClass: "col-span-6 sm:col-span-3",
   },
   {
     image: {
@@ -172,23 +183,11 @@ const logoList: Array<{
       class: "brightness-0 invert object-contain max-h-32 p-1",
       src: berachain,
       alt: "Berachain",
-      srcs: await getImgSrcs(berachain, [berachain.width]),
+      srcs: await getImgSrcs(berachain, [1000, 1000]),
       sizes:
         "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)",
     },
     link: "https://www.berachain.com/",
-    divClass: "col-span-4 sm:col-span-3",
-  },
-  {
-    image: {
-      class: "brightness-0 invert object-contain max-h-32 p-1",
-      src: cohere,
-      alt: "Cohere",
-      srcs: await getImgSrcs(cohere, [cohere.width]),
-      sizes:
-        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)",
-    },
-    link: "https://cohere.com/",
     divClass: "col-span-4 sm:col-span-3",
   },
 ];
