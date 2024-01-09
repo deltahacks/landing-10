@@ -2,6 +2,7 @@
 //Tier 1
 import mes from "../assets/sponsor_logos/mes.png";
 import mcMaster from "../assets/sponsor_logos/mcmaster.png";
+import berachain from "../assets/sponsor_logos/berachain.png";
 
 //Tier 2
 import fdm from "../assets/sponsor_logos/fdm.svg";
@@ -15,7 +16,6 @@ import voiceFlowLogo from "../assets/sponsor_logos/voiceflow.svg";
 import verbwireLogo from "../assets/sponsor_logos/verbwire.svg";
 import wolfram from "../assets/sponsor_logos/wolfram.svg";
 import stickeryou from "../assets/sponsor_logos/stickeryou.svg";
-import berachain from "../assets/sponsor_logos/berachain.png";
 import cohere from "../assets/sponsor_logos/cohere.svg";
 
 const { id } = Astro.props;
@@ -59,13 +59,13 @@ const logoList: Array<{
   {
     image: {
       class: "brightness-0 invert object-contain max-h-32 p-4",
-      src: cohere,
-      alt: "Cohere",
-      srcs: await getImgSrcs(cohere, [cohere.width]),
+      src: berachain,
+      alt: "Berachain",
+      srcs: await getImgSrcs(berachain, [500, 500]),
       sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)",
     },
-    link: "https://cohere.com/",
+    link: "https://www.berachain.com/",
     divClass: "col-span-6",
   },
   {
@@ -181,13 +181,13 @@ const logoList: Array<{
   {
     image: {
       class: "brightness-0 invert object-contain max-h-32 p-4",
-      src: berachain,
-      alt: "Berachain",
-      srcs: await getImgSrcs(berachain, [500, 500]),
+      src: cohere,
+      alt: "Cohere",
+      srcs: await getImgSrcs(cohere, [cohere.width]),
       sizes:
-        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)",
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
-    link: "https://www.berachain.com/",
+    link: "https://cohere.com/",
     divClass: "col-span-4 sm:col-span-3",
   },
 ];
