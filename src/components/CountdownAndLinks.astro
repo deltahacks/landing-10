@@ -55,30 +55,28 @@ const links: Array<{
       >
         <span> APPLICATIONS</span>
       </h1>
-      <a class="flex text-5xl underline md:text-7xl"
-        >CLOSED!
-        <Image
-          src={arrowUpRight}
-          alt="Link To Apply"
-          class="-mt-2 w-16 md:w-24"
-        />
-      </a>
+      <p class="flex text-5xl underline md:text-7xl">CLOSED!</p>
+      <Image
+        src={arrowUpRight}
+        alt="Link To Apply"
+        class="-mt-2 w-16 md:w-24"
+      />
     </div>
+  </div>
 
-    <div class="mx-auto p-10 md:row-span-2 md:px-5 lg:py-0">
-      <Image src={chestAsset} alt="Treasure Chest" class="w-64 lg:w-[360px]" />
-    </div>
+  <div class="mx-auto p-10 md:row-span-2 md:px-5 lg:py-0">
+    <Image src={chestAsset} alt="Treasure Chest" class="w-64 lg:w-[360px]" />
+  </div>
 
-    <div
-      class="grid grid-flow-col grid-rows-2 gap-y-2 md:col-span-2 md:grid-rows-2 md:gap-x-5 md:px-10 lg:px-0 lg:pb-28 lg:pr-14"
-    >
-      {
-        links.map(({ text, link }) => (
-          <div class="whitespace-nowrap font-sans text-xl underline underline-offset-4 opacity-75">
-            <a href={link}>{text}</a>
-          </div>
-        ))
-      }
-    </div>
+  <div
+    class="grid grid-flow-col grid-rows-2 gap-y-2 md:col-span-2 md:grid-rows-2 md:gap-x-5 md:px-10 lg:px-0 lg:pb-28 lg:pr-14"
+  >
+    {
+      links.map(({ text, link }) => (
+        <div class="whitespace-nowrap font-sans text-xl underline underline-offset-4 opacity-75">
+          <a href={link}>{text}</a>
+        </div>
+      ))
+    }
   </div>
 </div>
