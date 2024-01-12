@@ -18,6 +18,9 @@ import wolfram from "../assets/sponsor_logos/wolfram.svg";
 import stickeryou from "../assets/sponsor_logos/stickeryou.svg";
 import cohere from "../assets/sponsor_logos/cohere.svg";
 import echo3d from "../assets/sponsor_logos/echo3d.png";
+import nordvpn from "../assets/sponsor_logos/nordvpn.svg";
+import nordpass from "../assets/sponsor_logos/nordpass.svg";
+import incogni from "../assets/sponsor_logos/incogni.svg";
 
 const { id } = Astro.props;
 
@@ -201,6 +204,42 @@ const logoList: Array<{
         "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.echo3d.com/",
+    divClass: "col-span-4 sm:col-span-3",
+  },
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32 p-2",
+      src: nordvpn,
+      alt: "NordVPN",
+      srcs: await getImgSrcs(nordvpn, [nordvpn.width]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://nordvpn.com/",
+    divClass: "col-span-4 sm:col-span-3",
+  },
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32 p-2",
+      src: nordpass,
+      alt: "NordPass",
+      srcs: await getImgSrcs(nordpass, [nordpass.width]),
+      sizes:
+        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
+    },
+    link: "https://nordpass.com/",
+    divClass: "col-span-4 sm:col-span-3",
+  },
+  {
+    image: {
+      class: "brightness-0 invert object-contain max-h-32 p-2",
+      src: incogni,
+      alt: "Incogni",
+      srcs: await getImgSrcs(incogni, [incogni.width]),
+      sizes:
+        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)",
+    },
+    link: "https://incogni.com/",
     divClass: "col-span-4 sm:col-span-3",
   },
 ];
