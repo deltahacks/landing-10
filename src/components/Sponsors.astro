@@ -6,6 +6,7 @@ import berachain from "../assets/sponsor_logos/berachain.svg";
 
 //Tier 2
 import fdm from "../assets/sponsor_logos/fdm.svg";
+import logsnag from "../assets/sponsor_logos/logsnag.svg";
 import bell from "../assets/sponsor_logos/bell.svg";
 import scotiabank from "../assets/sponsor_logos/scotiabank.svg";
 import cse from "../assets/sponsor_logos/cse.svg";
@@ -37,24 +38,18 @@ const logoList: Array<{
   //TIER 1
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32",
       src: mes,
       alt: "McMaster Engineering Society",
       srcs: await getImgSrcs(mes, [864, 486]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.macengsociety.ca/",
     divClass: "col-span-12 md:col-span-6",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-4",
       src: mcMaster,
       alt: "McMaster University",
       srcs: await getImgSrcs(mcMaster, [mcMaster.width]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.mcmaster.ca/",
     divClass: "col-span-12 md:col-span-6",
@@ -62,72 +57,63 @@ const logoList: Array<{
   //TIER 2
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-4",
       src: berachain,
       alt: "Berachain",
       srcs: await getImgSrcs(berachain, [500, 500]),
-      sizes:
-        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)",
     },
     link: "https://www.berachain.com/",
     divClass: "col-span-6",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 scale-125",
       src: cse,
       alt: "CSE",
       srcs: await getImgSrcs(cse, [cse.width]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.cse-cst.gc.ca/en",
     divClass: "col-span-6",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-2",
+      src: logsnag,
+      alt: "Logsnag",
+      srcs: await getImgSrcs(logsnag, [logsnag.width]),
+    },
+    link: "https://www.logsnag.com/",
+    divClass: "col-span-6",
+  },
+  {
+    image: {
       src: scotiabank,
       alt: "Scotiabank",
       srcs: await getImgSrcs(scotiabank, [scotiabank.width]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.scotiabank.com/ca/en/personal.html",
     divClass: "col-span-6",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 scale-110",
       src: fdm,
       alt: "FDM",
       srcs: await getImgSrcs(fdm, [626, 467.4]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.fdmgroup.com/",
     divClass: "col-span-6",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-2",
       src: bell,
       alt: "Bell Canada",
       srcs: await getImgSrcs(bell, [bell.width]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.bell.ca/",
-    divClass: "col-span-6 sm:col-span-4",
+    divClass: "col-span-6",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-2",
       src: onezo,
       alt: "Onezo",
       srcs: await getImgSrcs(onezo, [onezo.width]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.onezotea.com/en",
     divClass: "col-span-6 sm:col-span-4",
@@ -135,12 +121,9 @@ const logoList: Array<{
   //TIER 3
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32",
       src: wolfram,
       alt: "Wolfram",
       srcs: await getImgSrcs(wolfram, [122, 500]),
-      sizes:
-        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), (min-width: 600px) 500px, calc(94.29vw - 47px)",
     },
     link: "https://www.wolfram.com",
     divClass: "col-span-6 sm:col-span-4",
@@ -148,96 +131,72 @@ const logoList: Array<{
 
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32",
       src: verbwireLogo,
       alt: "Verbwire",
       srcs: await getImgSrcs(verbwireLogo, [verbwireLogo.width]),
-      sizes:
-        "(min-width: 1260px) 229px, (min-width: 1040px) calc(14vw + 55px), (min-width: 780px) 133px, (min-width: 640px) calc(50vw - 66px), calc(100vw - 80px)",
     },
     link: "https://www.verbwire.com/",
-    divClass: "col-span-6 sm:col-span-3",
+    divClass: "col-span-6 sm:col-span-4",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-2",
       src: stickeryou,
       alt: "stickeryou",
       srcs: await getImgSrcs(stickeryou, [122, 500]),
-      sizes:
-        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)",
     },
     link: "https://www.stickeryou.com/en-ca",
-    divClass: "col-span-4 sm:col-span-3",
+    divClass: "col-span-6 sm:col-span-4",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-1",
       src: voiceFlowLogo,
       alt: "Voiceflow",
       srcs: await getImgSrcs(voiceFlowLogo, [628, 1080]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.voiceflow.com/",
-    divClass: "col-span-4 sm:col-span-3",
+    divClass: "col-span-4 sm:col-span-4",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-3",
       src: cohere,
       alt: "Cohere",
       srcs: await getImgSrcs(cohere, [cohere.width]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://cohere.com/",
-    divClass: "col-span-4 sm:col-span-3",
+    divClass: "col-span-4 sm:col-span-4",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-2",
       src: echo3d,
       alt: "Echo3D",
       srcs: await getImgSrcs(echo3d, [echo3d.width]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://www.echo3d.com/",
     divClass: "col-span-4 sm:col-span-3",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-2",
       src: nordvpn,
       alt: "NordVPN",
       srcs: await getImgSrcs(nordvpn, [nordvpn.width]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://nordvpn.com/",
     divClass: "col-span-4 sm:col-span-3",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-2",
       src: nordpass,
       alt: "NordPass",
       srcs: await getImgSrcs(nordpass, [nordpass.width]),
-      sizes:
-        "(min-width: 1240px) 197px, (min-width: 1040px) 15.56vw, (min-width: 780px) 101px, (min-width: 640px) calc(50vw - 98px), calc(100vw - 112px)",
     },
     link: "https://nordpass.com/",
     divClass: "col-span-4 sm:col-span-3",
   },
   {
     image: {
-      class: "brightness-0 invert object-contain max-h-32 p-2",
       src: incogni,
       alt: "Incogni",
       srcs: await getImgSrcs(incogni, [incogni.width]),
-      sizes:
-        "(min-width: 1260px) 245px, (min-width: 1040px) calc(14vw + 71px), (min-width: 780px) 149px, (min-width: 640px) calc(50vw - 50px), calc(100vw - 64px)",
     },
     link: "https://incogni.com/",
     divClass: "col-span-4 sm:col-span-3",

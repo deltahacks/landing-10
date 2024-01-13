@@ -1,5 +1,6 @@
 ---
 import type { GetImageResult } from "astro";
+import clsx from "clsx";
 import { getImage } from "astro:assets";
 
 export const getImgSrcs = async (imgSrc: ImageMetadata, widths: number[]) => {
@@ -12,7 +13,6 @@ export const getImgSrcs = async (imgSrc: ImageMetadata, widths: number[]) => {
 };
 
 export type ResponsiveImageItem = {
-  class: string;
   src: ImageMetadata;
   alt: string;
   srcs: {
@@ -31,7 +31,7 @@ const { image: responsiveImage, loading } = Astro.props;
 ---
 
 <img
-  class={responsiveImage?.class}
+  class={"min-w-[80%] brightness-0 invert object-contain max-h-32 p-2"}
   src={responsiveImage?.src.src}
   alt={responsiveImage?.alt}
   width={responsiveImage?.src.width}
@@ -39,6 +39,5 @@ const { image: responsiveImage, loading } = Astro.props;
   srcset={responsiveImage?.srcs
     .map((img) => `${img.src.src} ${img.width}w`)
     .join(", ")}
-  sizes={responsiveImage?.sizes}
   loading={loading}
 />
